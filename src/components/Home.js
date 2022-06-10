@@ -4,15 +4,14 @@ import Typed from 'react-typed';
 
 
 
+
 export const Home = () => {
-
-
 
   return (
     <div className="Home">        
         <img src={ writting_pen } alt="writting pen" id="writting_pen"></img>    
         <h1 id="accountantOfficeTitle">ACCOUNTANT OFFICE IN BOSTON</h1>
-        <h2 id="taxConsultantSubTitle">BUSINESS/TAX CONSULTANT FOR&nbsp;&nbsp;
+        <h2 id="taxConsultantSubTitle">TAX CONSULTANT FOR&nbsp;&nbsp;
           <span id="services" >
             <Typed 
             strings={[

@@ -96,3 +96,9 @@
 .menuList:hover:after {
   width: 100%;    
 }
+
+@media (max-width: 600px){
+  .menuList {
+    font-size: 1.8rem;
+  }
+}

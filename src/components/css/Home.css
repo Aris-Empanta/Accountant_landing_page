@@ -61,4 +61,40 @@
     box-shadow: inset 0px 7px 3px -6px silver;
   }
 
+@media (max-width: 490px){
 
+  #accountantOfficeTitle {
+    font-size: 1.6rem;
+    padding-top: 150px;
+  }
+
+  #taxConsultantSubTitle{
+    font-size: 1.1rem;
+  }
+
+  #services{
+    display: block;
+    font-size: 1.1rem;;
+  }
+
+  #writting_pen{
+    height: 550px;
+  }
+}  
+
+@media (min-width:491px) and (max-width: 820px) {
+ 
+  #accountantOfficeTitle {
+    font-size: 1.8rem;
+    padding-top: 100px;
+  }
+
+  #taxConsultantSubTitle{
+    font-size: 1.5rem;
+  }
+
+  #services{
+    font-size: 1.5rem;
+    display: block;
+  }
+}

@@ -6,3 +6,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/*The wrapper of the loader component, which will 
+center it on the screen.*/
+#loadingWrapper {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}

@@ -10,10 +10,14 @@ import { showLinks } from '../functions/functions';
 //The navigation bar menu
 export const NavBar = () => {
     
+    
+
     //With below listener, once we scroll below the height of the images, the navbare gets a background color.
     useEffect( () => {
+                const xIcon = document.getElementById("xIcon")    
+
                 window.addEventListener("scroll", () =>{
-                    if(window.pageYOffset > 390){
+                    if(window.pageYOffset > 370){
                         document.getElementById("barsContainer").style.backgroundColor = "silver"
                     }else{
                         document.getElementById("barsContainer").style.backgroundColor = "transparent"
@@ -21,8 +25,6 @@ export const NavBar = () => {
                   })        
                 }
              )
-
-
              
     return(
         <div className="navBar">

@@ -31,6 +31,7 @@ export const showLinks = () => {
   const contact = document.getElementById("contactSection")
 
   if(menu.style.display === 'flex'){
+    document.getElementById("barsContainer").style.backgroundColor = "transparent"
     setTimeout(() => {
       home.style.opacity = 1
     },200)
@@ -44,6 +45,10 @@ export const showLinks = () => {
       contact.style.opacity = 1
     },650)
   }else if(menu.style.display !== 'flex'){
+    if(window.pageYOffset > 370){
+      document.getElementById("barsContainer").style.backgroundColor = "silver"
+    }
+    
     home.style.opacity = 0
     aboutUs.style.opacity = 0
     insurance.style.opacity = 0
