@@ -72,13 +72,14 @@
 }
 
 /*The styling of the navbar links*/
-.menuList {
+.menuList {  
   position: relative;
   color: #282828;
   font-size: 2.2rem;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
   cursor: pointer;
+  opacity: 0;
 }
 
 .menuList:after {
