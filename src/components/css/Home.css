@@ -1,0 +1,64 @@
+/*The top image in Home page*/
+#writting_pen{
+    width: 100%;
+    height: 500px;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    filter: brightness(60%)
+}
+
+/*The top title of the office */
+#accountantOfficeTitle {    
+    padding-top: 150px;
+    color: white;
+    font-size: 3rem;
+    text-align:center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/*The sub-title of the office */
+#taxConsultantSubTitle{
+  color: yellow;    
+  text-align:center;
+}
+
+/*The text with the type-writter effect listing the services*/
+#services {
+  color: white;
+}
+
+/*The div that make the image take the shape of a folder*/
+#underHome {
+    position: relative;
+    text-align: center;
+    padding: 12px;
+    margin-top: 170px;
+    height: 6000px;
+    width: 100%;
+  }
+  #underHome:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: white;
+    transform: skew(0deg, 5deg);
+    box-shadow: inset 0px 7px 3px -6px silver;
+  }
+  #underHome:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: white;
+    transform: skew(0deg, -5deg);
+    box-shadow: inset 0px 7px 3px -6px silver;
+  }
+
+

@@ -1,0 +1,98 @@
+/*The div containing the links of the navbar menu*/
+#menu {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: aliceblue;
+    z-index: 4;
+    top:0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    
+  }
+  
+  /*The 'x' icon that appears in place of bars when we open the navbar menu*/
+  #xIcon {
+    display: none;
+    color: #282828;
+    float: right;
+    font-size: 2rem;
+    z-index: 6;
+    cursor: pointer;
+    margin-right:30px;
+    padding: 0;
+  
+  }
+  
+  #xIcon:hover {
+    transition: transform 1s;
+    transform : rotateZ(360deg);
+  }
+
+/*The navbar styling*/
+#barsContainer {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+    top: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    opacity: 0.9;
+  }
+  
+/*The bars icon on nav-bar menu*/
+#bars {
+    color: white;
+    padding-right: 30px;
+    float: right;
+    font-size: 2rem;
+    z-index: 6;
+    cursor: pointer;
+  }  
+
+/*The transparent button below the icon of the navbar*/  
+#navbarButton {
+    background-color: transparent;
+    border: none;
+}
+
+#navbarButton:focus {
+  outline:none;
+  box-shadow: none;
+}
+
+#homeSection{
+  opacity: 0;
+}
+
+/*The styling of the navbar links*/
+.menuList {
+  position: relative;
+  color: #282828;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+
+.menuList:after {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  content: '';
+  text-decoration: none;
+  height: 2px;
+  width: 0;
+  background-color: #282828;
+  transition: width 0.30s;
+}
+
+.menuList:hover:after {
+  width: 100%;    
+}
