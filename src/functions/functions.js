@@ -37,13 +37,13 @@ export const showLinks = () => {
     },200)
     setTimeout(() => {
       aboutUs.style.opacity = 1
-    },350)
+    },400)
     setTimeout(() => {
       insurance.style.opacity = 1
-    },500)
+    },600)
     setTimeout(() => {
       contact.style.opacity = 1
-    },650)
+    },800)
   }else if(menu.style.display !== 'flex'){
     if(window.pageYOffset > 370){
       document.getElementById("barsContainer").style.backgroundColor = "silver"
