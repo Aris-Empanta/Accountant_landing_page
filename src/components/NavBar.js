@@ -38,7 +38,7 @@ export const NavBar = () => {
             <div id="menu"  class="menuBar">
                 <a className="menuList" id="homeSection" >Home</a>
                 <a className="menuList" id="aboutUsSection" >About us</a>
-                <a className="menuList" id="insuranceSection" >Insurance</a>
+                <a className="menuList" id="insuranceSection" >Services</a>
                 <a className="menuList" id="contactSection" >Contact</a>
            </div>
         </div>
