@@ -8,6 +8,11 @@
     filter: brightness(60%)
 }
 
+#logo {
+  position: fixed;
+  z-index: 7;
+}
+
 /*The top title of the office */
 #accountantOfficeTitle {    
     padding-top: 150px;
@@ -24,6 +29,10 @@
   text-align:center;
 }
 
+#services {
+  color: aliceblue;
+}
+
 
 /*The div that make the image take the shape of a folder*/
 #underHome {
@@ -31,7 +40,7 @@
     text-align: center;
     padding: 12px;
     margin-top: 170px;
-    height: 900px;
+    height: 1500px;
     width: 100%;
   }
   #underHome:before {
@@ -40,10 +49,10 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 50%;
+    width: 51%;
     background: white;
     transform: skew(0deg, 5deg);
-    box-shadow: inset 0px 7px 3px -6px silver;
+    box-shadow: inset 0px 2px 3px silver
   }
   #underHome:after {
     content: '';
@@ -54,7 +63,7 @@
     width: 50%;
     background: white;
     transform: skew(0deg, -5deg);
-    box-shadow: inset 0px 7px 3px -6px silver;
+    box-shadow: inset -1px 2px 1px silver;
   }
 
 /*The entire div that contains the profile title and its paragraphs*/  
@@ -93,7 +102,10 @@
   text-align: left;
   width: 70%;
   word-wrap: break-word;
+}
 
+.serviceParagraph{
+  color: #202020;
 }
 
 /*each wrapper that contains the header and description paragraphs in profile section separately*/
@@ -116,7 +128,7 @@
   justify-content: center;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 0.7s, transform 0.7s;
 }
 
 #services4 {
@@ -125,7 +137,7 @@
   justify-content: center;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 0.7s, transform 0.7s;
 }
 
 /*Mobile screen adjustments*/
@@ -178,4 +190,9 @@
                          "item3 item3"
                          "item4 item4";  
    }
+  #services2{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s, transform 0.7s;
+  }
 }

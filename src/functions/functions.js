@@ -32,6 +32,8 @@ export const showLinks = () => {
 
   if(menu.style.display === 'flex'){
     document.getElementById("barsContainer").style.backgroundColor = "transparent"
+    document.getElementById("barsContainer").style.border = "none"
+    document.getElementById("barsContainer").style.boxShadow = "none"
     setTimeout(() => {
       home.style.opacity = 1
     },200)
@@ -44,14 +46,24 @@ export const showLinks = () => {
     setTimeout(() => {
       contact.style.opacity = 1
     },800)
-  }else if(menu.style.display !== 'flex'){
-    if(window.pageYOffset > 370){
-      document.getElementById("barsContainer").style.backgroundColor = "silver"
-    }
-    
+  }else if(window.pageYOffset <= 370 && menu.style.display !== 'flex'){
+    document.getElementById("barsContainer").style.backgroundColor = "transparent"
+    document.getElementById("barsContainer").style.boxShadow = "none"
+    document.getElementById("barsContainer").style.border = "none"
+    document.getElementById("barsContainer").style.opacity = 1
+    home.style.opacity = 0
+    aboutUs.style.opacity = 0
+    insurance.style.opacity = 0
+    contact.style.opacity = 0
+  }else if(window.pageYOffset > 370 && menu.style.display !== 'flex'){
+    document.getElementById("barsContainer").style.backgroundColor = "#005A9C"
+    document.getElementById("barsContainer").style.boxShadow = "0 2px 3px 0 rgba(0,0,0,.2)"
+    document.getElementById("barsContainer").style.border = "1px solid black"
+    document.getElementById("barsContainer").style.opacity = 0.7
     home.style.opacity = 0
     aboutUs.style.opacity = 0
     insurance.style.opacity = 0
     contact.style.opacity = 0
   }
+
 }

@@ -13,14 +13,19 @@ export const NavBar = () => {
     
 
     //With below listener, once we scroll below the height of the images, the navbare gets a background color.
-    useEffect( () => {
-                const xIcon = document.getElementById("xIcon")    
+    useEffect( () => {  
 
                 window.addEventListener("scroll", () =>{
-                    if(window.pageYOffset > 370){
-                        document.getElementById("barsContainer").style.backgroundColor = "silver"
+                    if(window.pageYOffset > 370 && document.getElementById("menu").style.display !== "flex"){
+                        document.getElementById("barsContainer").style.backgroundColor = "#005A9C"
+                        document.getElementById("barsContainer").style.opacity = 0.7
+                        document.getElementById("barsContainer").style.boxShadow = "0 2px 4px 0 rgba(0,0,0,.2)"
+                        document.getElementById("barsContainer").style.border = "1px solid black"
                     }else{
                         document.getElementById("barsContainer").style.backgroundColor = "transparent"
+                        document.getElementById("barsContainer").style.opacity = 1
+                        document.getElementById("barsContainer").style.boxShadow = "none"
+                        document.getElementById("barsContainer").style.border = "none"
                     }
                   })        
                 }
