@@ -1,4 +1,4 @@
-import './css/Home.css';
+import './css/HomeUpperSection.css';
 import writting_pen from './images/writting_pen.jpg';
 import Typed from 'react-typed';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,12 +7,12 @@ import { faBriefcase} from '@fortawesome/free-solid-svg-icons';
 import { faDollar} from '@fortawesome/free-solid-svg-icons';
 import { faChartLine} from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from 'react';
-import  Logo  from './images/logo.png'
+import { HomeLowerSection } from "./HomeLowerSection.js";
 
 
 
 
-export const Home = () => {
+export const HomeSection = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -30,9 +30,8 @@ export const Home = () => {
   )
 
   return (
-    <div className="Home">        
-        <img src={ writting_pen } alt="writting pen" id="writting_pen"></img>
-          
+    <div className="HomeUpperSection">        
+        <img src={ writting_pen } alt="writting pen" id="writting_pen"></img>          
         <h1 id="accountantOfficeTitle">ACCOUNTANT OFFICE IN BOSTON</h1>
         <h2 id="taxConsultantSubTitle">TAX CONSULTANT FOR&nbsp;&nbsp;
           <span id="services" >
@@ -109,9 +108,10 @@ export const Home = () => {
                      to our secure file portal.
                 </p>
               </div>
-            </div>                        
-          </div>          
-        </div>
+            </div>      
+            <HomeLowerSection />                        
+          </div>                   
+        </div>       
     </div>
   );
 }

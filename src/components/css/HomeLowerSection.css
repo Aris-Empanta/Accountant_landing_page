@@ -1,0 +1,101 @@
+/*The wrapper that contains the guarantees given*/ 
+#weGuarantee{
+    display: grid;
+    grid-column: 50px;
+    grid-template-areas: "header header header header"
+                          "reliability guarantee2 guarantee3 guarantee4";
+    background-color: #005A9C;
+    
+    width: 100%;
+    position: absolute;
+}
+
+/*The title saying: "We Guarantee"*/
+#guaranteeTitle {
+    grid-area: header;
+    color: aliceblue;
+}
+
+#reliability {
+    grid-area: reliability;
+    position: relative;
+    margin: 50px;
+    height: 150px;
+}
+
+.circleWrapper {
+    position: absolute;
+   
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.guaranteeIcon {
+    font-size: 2.4rem;
+    margin: 0;
+    margin-top: 15px;
+    color:aliceblue;
+}
+
+.guaranteeText {
+    font-size: 1.1rem;
+    margin: 0;
+    color:aliceblue;
+    margin-top: 15px;
+}
+
+.percent {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+    color:aliceblue;
+    margin-top: 10px;
+}
+
+
+
+.guarantees {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    
+}
+
+.track{
+    stroke: transparent;
+    fill: none;
+}
+
+.progress{
+    fill: none;
+    stroke: gold;
+    stroke-width: 10;
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;    
+    transition: stroke-dashoffset 2s ;
+}
+
+
+
+
+
+
+
+h1{
+    display: block;
+}
+
+
+
+
+
