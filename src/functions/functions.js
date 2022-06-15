@@ -21,8 +21,8 @@ export const showMenu = () => {
     }
   }
 
-  /*Below function makes navbar links appear one by one when 
-  we open the navbar menu */
+/*Below function makes navbar links appear one by one when 
+we open the navbar menu */
 export const showLinks = () => {
   const menu = document.getElementById("menu")
   const home = document.getElementById("homeSection")
@@ -67,3 +67,66 @@ export const showLinks = () => {
   }
 
 }
+
+/*Below variables will be used for the percentage counter effect in Home page named:
+reliability, validity, cooperation. */
+let reliabilityCounter = 0
+let validityCounter = 0
+let cooperationCounter = 0
+
+/*Below is the function that maximizes the percentage of the circle named reliability
+in home page. */
+export const reliabilityPercentageCounter = (element) => {
+
+  let percent = document.getElementById("reliabilityPercentage")
+
+  element.style.strokeDashoffset = 0;
+
+  const percentInterval = setInterval( () => {
+
+      if( reliabilityCounter <= 100 ){
+        percent.textContent = reliabilityCounter + " %"
+        reliabilityCounter ++
+      }else {
+        clearInterval(percentInterval)
+      }
+
+    }, 60)     
+  }
+
+/*Below is the function that maximizes the percentage of the circle named validity
+in home page. */
+
+  export const validityPercentageCounter = (element) => {
+
+    let percent = document.getElementById("validityPercentage")
+
+    element.style.strokeDashoffset = 0;
+  
+    const percentInterval = setInterval( () => {              
+        if( validityCounter <= 100 ){
+          percent.textContent = validityCounter + " %"
+          validityCounter ++
+        }else{
+          clearInterval(percentInterval)
+        }
+      }, 60)     
+    }
+
+/*Below is the function that maximizes the percentage of the circle named cooperation
+in home page. */
+
+export const cooperationPercentageCounter = (element) => {
+
+   let percent = document.getElementById("cooperationPercentage")
+   element.style.strokeDashoffset = 0;
+    
+   const percentInterval = setInterval( () => {              
+         if( cooperationCounter <= 100 ){
+            percent.textContent = cooperationCounter + " %"
+            cooperationCounter ++
+          }else{
+            clearInterval(percentInterval)
+          }
+        }, 60)     
+    }

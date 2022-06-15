@@ -2,20 +2,27 @@
 #weGuarantee{
     display: grid;
     grid-column: 50px;
-    grid-template-areas: "header header header header"
-                          "reliability guarantee2 guarantee3 guarantee4";
-    background-color: #005A9C;
-    
+    grid-template-areas: "header header header"
+                          "reliability validity cooperation";
+    background-color: #005A9C;    
     width: 100%;
     position: absolute;
+    height: 470px;
+    align-items: center;    
+    border-top: 1px solid black;
+    box-shadow: 3px 3px 6px  black;
+    margin-top: 50px;
 }
 
 /*The title saying: "We Guarantee"*/
 #guaranteeTitle {
     grid-area: header;
-    color: aliceblue;
+    color: whitesmoke;
+    font-size: 2.5rem;
+    font-weight: 400;
 }
 
+/*The reliability circle wrapper*/
 #reliability {
     grid-area: reliability;
     position: relative;
@@ -23,79 +30,95 @@
     height: 150px;
 }
 
+/*The validity circle wrapper*/
+#validity {
+    grid-area: validity;
+    position: relative;
+    margin: 50px;
+    height: 150px;
+    margin-bottom: 70px;
+}
+
+/*The cooperation circle wrapper*/
+#cooperation {
+    grid-area: cooperation;
+    position: relative;
+    margin: 50px;
+    height: 150px;
+}
+
+
+/*The outer svg elements that contain each progress circle*/
 .circleWrapper {
-    position: absolute;
-   
+    position: absolute;   
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
 }
 
+/*Each font-awesome icon inside the each progress circle*/
 .guaranteeIcon {
     font-size: 2.4rem;
     margin: 0;
     margin-top: 15px;
-    color:aliceblue;
+    color:whitesmoke;
 }
 
+/*The titles above each percentage in the progress circles */
 .guaranteeText {
     font-size: 1.1rem;
     margin: 0;
-    color:aliceblue;
+    color:gold;
     margin-top: 15px;
 }
 
+/*The styling of the 100% numbers*/
 .percent {
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 400;
     margin: 0;
     color:aliceblue;
     margin-top: 10px;
 }
 
-
-
+/*The circle inside the progress rings*/
 .guarantees {
     position: absolute;
-    width: 170px;
-    height: 170px;
-    background-color: blueviolet;
+    width: 210px;
+    height: 210px;
+    background-color: #002D62;
     border-radius: 50%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  
-    
+    justify-content: center;   
 }
 
+/*The inner invisible circle of the progress rings*/
 .track{
     stroke: transparent;
     fill: none;
 }
 
-.progress{
+/*The circle that fills up with the percentage of the 3 guarantees*/
+.progressCircle{
     fill: none;
     stroke: gold;
-    stroke-width: 10;
-    stroke-dasharray: 700;
-    stroke-dashoffset: 700;    
+    stroke-width: 5;
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;    
     transition: stroke-dashoffset 2s ;
 }
 
-
-
-
-
-
-
-h1{
-    display: block;
+@media (max-width: 720px) {
+    #weGuarantee {
+        grid-template-areas:  "header"
+                              "reliability" 
+                              "validity" 
+                              "cooperation";
+        height: 1100px;
+      }
+            
 }
-
-
-
-
-
