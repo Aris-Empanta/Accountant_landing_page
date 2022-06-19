@@ -1,16 +1,11 @@
 /*The top image in Home page*/
 #writting_pen{
-    width: 100%;
-    height: 500px;
+    width: 100vw;
+    height: 550px;
     position: fixed;
     z-index: -1;
     top: 0;
-    filter: brightness(60%)
-}
-
-#logo {
-  position: fixed;
-  z-index: 7;
+    filter: brightness(60%);
 }
 
 /*The top title of the office */
@@ -142,7 +137,6 @@
 
 /*Mobile screen adjustments*/
 @media (max-width: 490px){
-
   #accountantOfficeTitle {
     font-size: 1.6rem;
     padding-top: 150px;
@@ -156,10 +150,10 @@
     display: block;
     font-size: 1.1rem;;
   }
-
-  #writting_pen{
-    height: 550px;
+  #underHome {
+    height: 2500px;
   }
+
 }  
 
 /*Minimized screens adjustments*/
@@ -168,6 +162,9 @@
   #accountantOfficeTitle {
     font-size: 1.8rem;
     padding-top: 100px;
+  }
+  #underHome {
+    height: 2500px;
   }
 
   #taxConsultantSubTitle{
@@ -183,6 +180,7 @@
 /*Profile section grid adjustments once minimized*/
 
 @media (max-width: 1300px){
+
   #profileSection  {    
     grid-template-areas: "header header"
                          "item1 item1"
@@ -190,9 +188,23 @@
                          "item3 item3"
                          "item4 item4";  
    }
-  #services2{
+
+  #services2 {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.7s, transform 0.7s;
+    transition: opacity 1s, transform 1.5s;
   }
+  
+  #services3 {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s, transform 1.5s;
+  }
+  
+  #services3 {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s, transform 1.5s;
+  }
+  
 }

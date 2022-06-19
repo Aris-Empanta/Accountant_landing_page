@@ -1,0 +1,143 @@
+#linksGrid {
+    display: grid;
+    grid-template-areas: "header header header"
+                         "firstLink secondLink thirdLink";
+    width: 100vw;
+    position: absolute;
+    margin-top: 1000px;
+    height: 500px;
+    background-color: white;
+}
+
+#io{
+    width: 100%;
+    height: 350px;
+}
+
+#linksTitle {
+    grid-area: header;
+    justify-self: center;
+    align-self: center;
+}
+
+#firstLink {
+    grid-area: firstLink;
+    justify-self: center;
+    align-self: center;   
+}
+
+#secondLink {
+    grid-area: secondLink;
+    justify-self: center;
+    align-self: center; 
+}
+
+#thirdLink {
+    grid-area: thirdLink;
+    justify-self: center;
+    align-self: center;
+}
+
+.portraitLinks {    
+    width: 300px;
+    height: 400px;
+    background-color: blue;
+    transform: rotateX(90deg); 
+    box-shadow: 1px 1px 4px 2px black;
+}
+
+.rotateOnX {
+    animation: rotationX 1s 1;
+}
+
+@keyframes rotationX {
+    0% {
+        transform: rotateX(90deg);
+    }
+    80% {
+        transform: rotateX(-15deg);
+    }    
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+@media (max-width: 349px){
+
+    #linksGrid {
+        grid-template-areas: "header"
+                             "firstLink" 
+                             "secondLink" 
+                             "thirdLink";
+        margin-top: 2350px;  
+        height: 1500px;
+    }
+
+    #linksTitle{
+        align-self: baseline;
+    }
+
+    #firstLink{
+        align-self: baseline;
+    }
+
+    #secondLink{
+        align-self: baseline;
+    }
+
+    #thirdLink{
+        align-self: baseline;
+    }
+
+    .portraitLinks { 
+        width: 90%;
+    }
+
+}
+
+@media (min-width: 350px) and (max-width: 720px) {
+    #linksGrid {
+        grid-template-areas: "header"
+                             "firstLink" 
+                             "secondLink" 
+                             "thirdLink";
+        margin-top: 2150px;  
+        height: 1800px;
+    }
+    
+    #linksTitle{
+        align-self: baseline;
+    }
+
+    #firstLink{
+        align-self: baseline;
+    }
+
+    #secondLink{
+        align-self: baseline;
+    }
+
+    #thirdLink{
+        align-self: baseline;
+    }
+
+}
+
+@media (min-width: 720px) and (max-width: 1100px){
+    #linksGrid {
+        grid-template-areas: "header"
+                             "firstLink" 
+                             "secondLink" 
+                             "thirdLink";
+        margin-top: 1300px;  
+        height: 2000px;
+    }
+    
+    
+}
+
+@media (min-width: 1101px) and (max-width: 1300px){
+    #linksGrid {        
+        margin-top: 1300px;       
+    }
+}

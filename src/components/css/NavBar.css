@@ -3,7 +3,7 @@
     position: fixed;
     display: none;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     background-color: aliceblue;
     z-index: 4;
     top:0;
@@ -36,7 +36,7 @@
 #barsContainer {
     background-color: transparent;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 6;
     top: 0;
     height: 100px;
