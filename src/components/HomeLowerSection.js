@@ -19,7 +19,7 @@ export const HomeLowerSection = () => {
       let cooperationProgressCircle = document.getElementById("cooperationProgressCircle")      
 
       window.addEventListener("scroll", () =>{
-        if(window.pageYOffset > document.getElementById("weGuarantee").offsetTop + 200){
+        if(window.pageYOffset > document.getElementById("weGuarantee").offsetTop + 170){
             reliabilityPercentageCounter(reliabilityProgressCircle)
             setTimeout(() => validityPercentageCounter(validityProgressCircle), 1000)
             setTimeout(() => cooperationPercentageCounter(cooperationProgressCircle), 2000)          

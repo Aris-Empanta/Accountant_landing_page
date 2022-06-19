@@ -1,7 +1,3 @@
-.HomeLowerSection{
-    background-color: #005A9C;
-}
-
 /*The wrapper that contains the guarantees given*/ 
 #weGuarantee{
     display: grid;
@@ -9,7 +5,7 @@
     grid-template-areas: "header header header"
                           "reliability validity cooperation";
     background-color: #005A9C;    
-    width: 100%;
+    width: 100vw;
     position: absolute;
     height: 470px;
     align-items: center;    

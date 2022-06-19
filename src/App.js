@@ -4,6 +4,7 @@ import {useState, useEffect} from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import { NavBar } from './components/NavBar';
 
+
 //The parent component of the entire app
 const App = () => {
 
@@ -21,8 +22,9 @@ const App = () => {
       { loading?(<div id="loadingWrapper"><ClipLoader color={"darkcyan"} loading={loading} size={100} /></div>) :
       (<div id="components">
         <NavBar />
-        <HomeSection />       
-      </div>)}
+        <HomeSection />     
+      </div>
+      )}
     </div>
   );
 }

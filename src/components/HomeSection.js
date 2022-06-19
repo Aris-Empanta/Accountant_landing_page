@@ -8,6 +8,7 @@ import { faDollar} from '@fortawesome/free-solid-svg-icons';
 import { faChartLine} from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from 'react';
 import { HomeLowerSection } from "./HomeLowerSection.js";
+import { CustomerReview } from './customerReview.js';
 
 
 
@@ -23,8 +24,6 @@ export const HomeSection = () => {
             if(window.pageYOffset > document.getElementById('services2').offsetTop + 100){
               document.getElementById('services3').style.opacity = 1;
               document.getElementById('services3').style.transform = "translateY(0)";
-            }
-            if(window.pageYOffset > document.getElementById('services3').offsetTop + 100){
               document.getElementById('services4').style.opacity = 1;
               document.getElementById('services4').style.transform = "translateY(0)";
             }
@@ -113,7 +112,8 @@ export const HomeSection = () => {
                 </p>
               </div>
             </div>      
-            <HomeLowerSection />                        
+            <HomeLowerSection />
+            <CustomerReview />                        
           </div>                   
         </div>       
     </div>

@@ -1,6 +1,6 @@
 /*The top image in Home page*/
 #writting_pen{
-    width: 100%;
+    width: 100vw;
     height: 550px;
     position: fixed;
     z-index: -1;
@@ -150,6 +150,9 @@
     display: block;
     font-size: 1.1rem;;
   }
+  #underHome {
+    height: 2500px;
+  }
 
 }  
 
@@ -159,6 +162,9 @@
   #accountantOfficeTitle {
     font-size: 1.8rem;
     padding-top: 100px;
+  }
+  #underHome {
+    height: 2500px;
   }
 
   #taxConsultantSubTitle{
