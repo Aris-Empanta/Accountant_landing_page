@@ -3,9 +3,9 @@
     display: grid;
     grid-template-areas: "header header header"
                          "firstLink secondLink thirdLink";    
-    top: 950px;
+    top: 1050px;
     width: 100vw;
-    height: 600px;
+    height: 800px;
     position: absolute;
     background-color: white;
 }
@@ -70,24 +70,8 @@
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        top: 2200px;
-        height: 1500px;
-    }
-
-    #linksTitle{
-        align-self: baseline;
-    }
-
-    #firstLink{
-        align-self: baseline;
-    }
-
-    #secondLink{
-        align-self: baseline;
-    }
-
-    #thirdLink{
-        align-self: baseline;
+        top: 2300px;
+        height: 1900px;
     }
 
     .portraitLinks { 
@@ -102,24 +86,8 @@
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        top: 2050px;  
+        top: 2100px;  
         height: 1900px;
-    }
-    
-    #linksTitle{
-        align-self: baseline;
-    }
-
-    #firstLink{
-        align-self: baseline;
-    }
-
-    #secondLink{
-        align-self: baseline;
-    }
-
-    #thirdLink{
-        align-self: baseline;
     }
 
 }
@@ -130,15 +98,15 @@
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        top:  1270px;  
+        top:  1350px;  
         height: 2000px;
     }
     
-    
+
 }
 
 @media (min-width: 1101px) and (max-width: 1300px){
     #linksGrid {           
-        top: 1250px;   
+        top: 1350px;   
     }
 }
