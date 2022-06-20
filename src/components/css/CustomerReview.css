@@ -1,11 +1,12 @@
+
 #linksGrid {
     display: grid;
     grid-template-areas: "header header header"
-                         "firstLink secondLink thirdLink";
+                         "firstLink secondLink thirdLink";    
+    top: 950px;
     width: 100vw;
+    height: 600px;
     position: absolute;
-    margin-top: 1000px;
-    height: 500px;
     background-color: white;
 }
 
@@ -69,7 +70,7 @@
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        margin-top: 2350px;  
+        top: 2200px;
         height: 1500px;
     }
 
@@ -95,14 +96,14 @@
 
 }
 
-@media (min-width: 350px) and (max-width: 720px) {
+@media (min-width: 349px) and (max-width: 720px) {
     #linksGrid {
         grid-template-areas: "header"
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        margin-top: 2150px;  
-        height: 1800px;
+        top: 2050px;  
+        height: 1900px;
     }
     
     #linksTitle{
@@ -123,13 +124,13 @@
 
 }
 
-@media (min-width: 720px) and (max-width: 1100px){
+@media (min-width: 721px) and (max-width: 1100px){
     #linksGrid {
         grid-template-areas: "header"
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        margin-top: 1300px;  
+        top:  1270px;  
         height: 2000px;
     }
     
@@ -137,7 +138,7 @@
 }
 
 @media (min-width: 1101px) and (max-width: 1300px){
-    #linksGrid {        
-        margin-top: 1300px;       
+    #linksGrid {           
+        top: 1250px;   
     }
 }

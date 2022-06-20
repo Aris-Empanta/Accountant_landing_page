@@ -41,10 +41,11 @@ export const NavBar = () => {
                 </button>       
             </div>
             <div id="menu"  class="menuBar">
-                <a className="menuList" id="homeSection" >Home</a>
-                <a className="menuList" id="aboutUsSection" >About us</a>
-                <a className="menuList" id="insuranceSection" >Services</a>
-                <a className="menuList" id="contactSection" >Contact</a>
+                <a className="menuList" id="home" >Home</a>
+                <a className="menuList" id="accounting" >Accounting</a>
+                <a className="menuList" id="tax" >Tax Services</a>
+                <a className="menuList" id="insurance" >Insurances</a>
+                <a className="menuList" id="contact" >Contact</a>
            </div>
         </div>
     )

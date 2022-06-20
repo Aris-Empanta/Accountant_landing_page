@@ -1,3 +1,9 @@
+.HomeLowerSection{
+    position: relative;
+    background-color: aqua;
+    height: 1200px;
+}
+
 /*The wrapper that contains the guarantees given*/ 
 #weGuarantee{
     display: grid;
@@ -11,7 +17,7 @@
     align-items: center;    
     border-top: 1px solid black;
     box-shadow: 3px 3px 6px  black;
-    margin-top: 50px;
+    z-index: 1;
 }
 
 /*The title saying: "We Guarantee"*/
