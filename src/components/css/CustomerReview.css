@@ -18,25 +18,25 @@
 #linksTitle {
     grid-area: header;
     justify-self: center;
-    align-self: center;
+    align-self: flex-end;
 }
 
 #firstLink {
     grid-area: firstLink;
     justify-self: center;
-    align-self: center;   
+    align-self: flex-end;   
 }
 
 #secondLink {
     grid-area: secondLink;
     justify-self: center;
-    align-self: center; 
+    align-self: flex-end; 
 }
 
 #thirdLink {
     grid-area: thirdLink;
     justify-self: center;
-    align-self: center;
+    align-self: flex-end;
 }
 
 .portraitLinks {    
