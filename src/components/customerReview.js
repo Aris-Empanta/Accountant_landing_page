@@ -28,12 +28,13 @@ class CustomerReview extends React.Component {
     } 
 
     render(){
-        return <div class="customerReview" id="linksGrid">              
-                  <h1 id="linksTitle">This is the title</h1>
-                  <div id="firstLink" className="portraitLinks"><img id="io" src={io}></img></div>
-                  <div id="secondLink" className="portraitLinks"><img id="io" src={io}></img></div>
-                  <div id="thirdLink" className="portraitLinks"><img id="io" src={io}></img></div>                
-               </div>               
+        return   <div class="customerReview" id="linksGrid">              
+                    <h1 id="linksTitle">This is the title</h1>
+                    <div id="firstLink" className="portraitLinks"><img id="io" src={io}></img></div>
+                    <div id="secondLink" className="portraitLinks"><img id="io" src={io}></img></div>
+                    <div id="thirdLink" className="portraitLinks"><img id="io" src={io}></img></div>                
+                 </div>  
+                            
         }
 }
 
