@@ -24,19 +24,19 @@
 #firstLink {
     grid-area: firstLink;
     justify-self: center;
-    align-self: flex-end;   
+    align-self: center;   
 }
 
 #secondLink {
     grid-area: secondLink;
     justify-self: center;
-    align-self: flex-end; 
+    align-self: center; 
 }
 
 #thirdLink {
     grid-area: thirdLink;
     justify-self: center;
-    align-self: flex-end;
+    align-self: center;
 }
 
 .portraitLinks {    
