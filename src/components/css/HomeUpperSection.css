@@ -63,7 +63,7 @@
 
 /*The entire div that contains the profile title and its paragraphs*/  
 #profileSection  {
-  top: 30px;
+  top: 80px;
   z-index: 3;
   display: grid;
   position: absolute;
@@ -71,7 +71,7 @@
  grid-template-areas: "header header"
                       "item1 item2"
                       "item3 item4";
-  grid-row-gap: 30px;
+  grid-row-gap: 65px;
 
 }
 

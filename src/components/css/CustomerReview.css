@@ -3,11 +3,11 @@
     display: grid;
     grid-template-areas: "header header header"
                          "firstLink secondLink thirdLink";    
-    top: 800px;
+    top: 950px;
     width: 100vw;
-    height: 500px;
+    height: 600px;
     position: absolute;
-
+    background-color: white;
 }
 
 #io{
@@ -70,12 +70,12 @@
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        top: 2020px;
+        top: 2200px;
         height: 1500px;
     }
 
     #linksTitle{
-        align-self: center;
+        align-self: baseline;
     }
 
     #firstLink{
@@ -102,8 +102,8 @@
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        top: 1900px;  
-        height: 1700px;
+        top: 2050px;  
+        height: 1900px;
     }
     
     #linksTitle{
@@ -130,7 +130,7 @@
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        top:  1070px;  
+        top:  1270px;  
         height: 2000px;
     }
     
@@ -139,6 +139,6 @@
 
 @media (min-width: 1101px) and (max-width: 1300px){
     #linksGrid {           
-        top: 1070px;   
+        top: 1250px;   
     }
 }
