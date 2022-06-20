@@ -1,7 +1,7 @@
 .HomeLowerSection{
     position: relative;
-    background-color: aqua;
     height: 1200px;
+    margin-top: 100px;
 }
 
 /*The wrapper that contains the guarantees given*/ 
