@@ -1,7 +1,7 @@
 .HomeLowerSection{
     position: relative;
-    height: 1200px;
-    margin-top: 100px;
+    height: 1200px;   
+    background-color: aqua;
 }
 
 /*The wrapper that contains the guarantees given*/ 
@@ -11,13 +11,15 @@
     grid-template-areas: "header header header"
                           "reliability validity cooperation";
     background-color: #005A9C;    
-    width: 100vw;
     position: absolute;
-    height: 470px;
+    top: 30px;
+    width: 100vw;   
+    height: 450px;
     align-items: center;    
     border-top: 1px solid black;
     box-shadow: 3px 3px 6px  black;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 /*The title saying: "We Guarantee"*/
@@ -58,6 +60,7 @@
 .circleWrapper {
     position: absolute;   
     left: 50%;
+    right: 0;
     top: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
 }
@@ -115,7 +118,7 @@
     stroke-width: 5;
     stroke-dasharray: 800;
     stroke-dashoffset: 800;    
-    transition: stroke-dashoffset 2s ;
+    transition: stroke-dashoffset 1.5s ;
 }
 
 @media (max-width: 720px) {

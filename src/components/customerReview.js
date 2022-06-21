@@ -11,24 +11,27 @@ class CustomerReview extends React.Component {
       super(props);
     }    
 
-    componentDidMount(){
-      const gridTopDistance = document.getElementById("linksGrid").offsetTop
-      const portraitLinks = document.querySelectorAll(".portraitLinks")      
+    componentDidMount(){      
+  
+      window.addEventListener("scroll", () => {
 
-      document.addEventListener("scroll", () => {
-        
-          if(window.pageYOffset > gridTopDistance + 50 ){
-            for(let i=0; i < portraitLinks.length; i++ ){ 
-              portraitLinks[i].classList.add("rotateOnX")
-              portraitLinks[i].style.transform = "rotateX(0)" 
-            }   
-          }          
+          const revealElements = document.querySelectorAll(".portraitLinks");
+
+          for(let i=0; i < revealElements.length; i++ ){
+
+            const windowHeight = window.innerHeight;
+            const revealElementsDistance = revealElements[i].getBoundingClientRect().top;
+            
+            if(windowHeight >  revealElementsDistance ){
+              revealElements[i].classList.add("rotateOnX")
+            }
+          }
         }
       )
     } 
 
     render(){
-        return   <div class="customerReview" id="linksGrid">              
+        return   <div class="customerReview" id="linksGrid">            
                     <h1 id="linksTitle">This is the title</h1>
                     <div id="firstLink" className="portraitLinks"><img id="io" src={io}></img></div>
                     <div id="secondLink" className="portraitLinks"><img id="io" src={io}></img></div>

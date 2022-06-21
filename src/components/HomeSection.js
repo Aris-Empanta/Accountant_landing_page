@@ -8,29 +8,31 @@ import { faDollar} from '@fortawesome/free-solid-svg-icons';
 import { faChartLine} from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from 'react';
 import { HomeLowerSection } from "./HomeLowerSection.js";
-import { CustomerReview } from './customerReview.js';
+
 
 
 
 
 export const HomeSection = () => {
+  
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-            if(window.pageYOffset > document.getElementById('services1').offsetTop + 100){
-              document.getElementById('services2').style.opacity = 1;
-              document.getElementById('services2').style.transform = "translateY(0)";
+
+        window.addEventListener("scroll", () => {
+            const valuationServices = document.getElementById('services3');
+            const taxServices = document.getElementById('services4');
+            const scrollPosition = window.pageYOffset
+
+            if(scrollPosition > valuationServices.offsetTop){
+                valuationServices.style.opacity = 1;
+                valuationServices.style.transform = "translateY(0)";
+                taxServices.style.opacity = 1;
+                taxServices.style.transform = "translateY(0)";
             }
-            if(window.pageYOffset > document.getElementById('services2').offsetTop + 100){
-              document.getElementById('services3').style.opacity = 1;
-              document.getElementById('services3').style.transform = "translateY(0)";
-              document.getElementById('services4').style.opacity = 1;
-              document.getElementById('services4').style.transform = "translateY(0)";
-            }
-        }
-      )
-   }
-  )
+          }
+        )
+      }
+    )
 
   return (
     <div className="HomeUpperSection">        
@@ -112,8 +114,7 @@ export const HomeSection = () => {
                 </p>
               </div>
             </div>      
-            <HomeLowerSection />
-            <CustomerReview />                        
+            <HomeLowerSection />                                  
           </div>                   
         </div>       
     </div>
