@@ -3,7 +3,7 @@
     display: grid;
     grid-template-areas: "header header header"
                          "firstLink secondLink thirdLink";    
-    top: 1050px;
+    top: 900px;
     width: 100vw;
     height: 800px;
     position: absolute;
@@ -70,7 +70,7 @@
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        top: 2300px;
+        top: 2150px;
         height: 1900px;
     }
 
@@ -86,7 +86,7 @@
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        top: 2100px;  
+        top: 1980px;  
         height: 1900px;
     }
 
