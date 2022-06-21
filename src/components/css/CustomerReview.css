@@ -1,13 +1,12 @@
 
+
 #linksGrid {
     display: grid;
     grid-template-areas: "header header header"
                          "firstLink secondLink thirdLink";    
-    top: 900px;
+    top: 480px;
     width: 100vw;
-    height: 800px;
     position: absolute;
-    background-color: white;
 }
 
 #io{
@@ -25,6 +24,7 @@
     grid-area: firstLink;
     justify-self: center;
     align-self: center;   
+    
 }
 
 #secondLink {
@@ -44,11 +44,13 @@
     height: 400px;
     background-color: blue;
     transform: rotateX(90deg); 
+    
     box-shadow: 1px 1px 4px 2px black;
 }
 
 .rotateOnX {
-    animation: rotationX 1s 1;
+    animation: rotationX 1.5s 1;    
+    transform: rotateX(0);
 }
 
 @keyframes rotationX {
@@ -63,30 +65,15 @@
     }
 }
 
-@media (max-width: 349px){
 
+
+@media (max-width: 720px) {
     #linksGrid {
         grid-template-areas: "header"
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        top: 2150px;
-        height: 1900px;
-    }
-
-    .portraitLinks { 
-        width: 90%;
-    }
-
-}
-
-@media (min-width: 349px) and (max-width: 720px) {
-    #linksGrid {
-        grid-template-areas: "header"
-                             "firstLink" 
-                             "secondLink" 
-                             "thirdLink";
-        top: 1980px;  
+        top: 1100px;  
         height: 1900px;
     }
 
@@ -98,15 +85,10 @@
                              "firstLink" 
                              "secondLink" 
                              "thirdLink";
-        top:  1350px;  
+       
         height: 2000px;
     }
     
 
 }
 
-@media (min-width: 1101px) and (max-width: 1300px){
-    #linksGrid {           
-        top: 1350px;   
-    }
-}

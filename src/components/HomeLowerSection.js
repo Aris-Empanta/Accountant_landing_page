@@ -7,22 +7,25 @@ import { faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import { reliabilityPercentageCounter } from '../functions/functions';
 import { validityPercentageCounter } from '../functions/functions';
 import { cooperationPercentageCounter } from '../functions/functions';
+import { CustomerReview } from './customerReview.js';
 
 
 export const HomeLowerSection = () => {
     
     
-    useEffect(() => {
-
-      let reliabilityProgressCircle = document.getElementById("reliabilityProgressCircle")      
-      let validityProgressCircle = document.getElementById("validityProgressCircle") 
-      let cooperationProgressCircle = document.getElementById("cooperationProgressCircle")      
+    useEffect(() => {      
 
       window.addEventListener("scroll", () =>{
-        if(window.pageYOffset > document.getElementById("weGuarantee").offsetTop + 170){
+
+        const reliabilityProgressCircle = document.getElementById("reliabilityProgressCircle");      
+        const validityProgressCircle = document.getElementById("validityProgressCircle"); 
+        const cooperationProgressCircle = document.getElementById("cooperationProgressCircle");
+        const scrollPosition = window.pageYOffset;
+
+        if(scrollPosition >  document.querySelector('.HomeLowerSection').offsetTop + 250){
             reliabilityPercentageCounter(reliabilityProgressCircle)
-            setTimeout(() => validityPercentageCounter(validityProgressCircle), 1000)
-            setTimeout(() => cooperationPercentageCounter(cooperationProgressCircle), 2000)          
+            setTimeout(() => validityPercentageCounter(validityProgressCircle), 500)
+            setTimeout(() => cooperationPercentageCounter(cooperationProgressCircle), 1000)          
           }         
       })
      }
@@ -65,8 +68,9 @@ export const HomeLowerSection = () => {
                   <h3 class="guaranteeText">COOPERATION</h3>                
                   <h3 id="cooperationPercentage" class="percent">0 %</h3> 
                 </div>                              
-              </div> 
+              </div>             
             </div>
+            <CustomerReview/>
         </div>
        )
      }
