@@ -102,36 +102,30 @@
 }
 
 .serviceParagraph{
+  display: flex;  
+  justify-content: center;
   color: #202020;
 }
 
 /*each wrapper that contains the header and description paragraphs in profile section separately*/
 #services1 {
-  grid-area: item1;
-  display: flex;  
-  justify-content: center;  
+  grid-area: item1;   
 }
 
 #services2 {
-  grid-area: item2;
-  display: flex;
-  justify-content: center;
+  grid-area: item2; 
 }
 
 /*Styling the last 2 paragraphs so that with javascript they will appear gradually on scroll*/
 #services3 {
-  grid-area: item3;
-  display: flex;  
-  justify-content: center;
+  grid-area: item3; 
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.7s, transform 0.7s;
 }
 
 #services4 {
-  grid-area: item4;
-  display: flex;  
-  justify-content: center;
+  grid-area: item4;  
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.7s, transform 0.7s;
@@ -203,4 +197,17 @@
     transition: opacity 1s, transform 1.5s;
   }
   
+}
+
+/*Fixing deteils for i-pads specifically*/
+@media (min-height: 1000px) {
+  #services3 {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  #services4 {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

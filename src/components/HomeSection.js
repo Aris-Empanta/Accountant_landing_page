@@ -18,22 +18,24 @@ export const HomeSection = () => {
 
   useEffect(() => {
 
-        window.addEventListener("scroll", () => {
-            const valuationServices = document.getElementById('services3');
-            const taxServices = document.getElementById('services4');
-            const scrollPosition = window.pageYOffset
+        window.addEventListener("scroll", () => {         
+          const element = document.querySelectorAll(".serviceParagraph")
 
-            if(scrollPosition > valuationServices.offsetTop){
-                valuationServices.style.opacity = 1;
-                valuationServices.style.transform = "translateY(0)";
-                taxServices.style.opacity = 1;
-                taxServices.style.transform = "translateY(0)";
+          for( let i = 0; i < element.length; i++ ){
+            const positionToAppear = window.innerHeight - 50
+            const elementsDistanceTop = element[i].getBoundingClientRect().top
+
+            if( positionToAppear >= elementsDistanceTop){
+              element[i].style.opacity = 1;
+              element[i].style.transform = "translateY(0)";
             }
+           }
           }
         )
       }
     )
-
+         
+ 
   return (
     <div className="HomeUpperSection">        
         <img src={ writting_pen } alt="writting pen" id="writting_pen"></img>          

@@ -17,7 +17,20 @@ export const HomeLowerSection = () => {
 
       window.addEventListener("scroll", () =>{
 
-        const reliabilityProgressCircle = document.getElementById("reliabilityProgressCircle");      
+        const windowHeight = window.innerHeight;
+        const circlesLoadPosition = windowHeight - 200;
+        const reliabilityTopDistance = document.getElementById("reliabilityProgressCircle").getBoundingClientRect().top
+        const reliabilityCircle = document.getElementById("reliabilityProgressCircle");      
+        const validityCircle = document.getElementById("validityProgressCircle"); 
+        const cooperationCircle = document.getElementById("cooperationProgressCircle");
+
+        if(circlesLoadPosition > reliabilityTopDistance){
+          reliabilityPercentageCounter(reliabilityCircle)
+          setTimeout(() => validityPercentageCounter(validityCircle), 500)
+          setTimeout(() => cooperationPercentageCounter(cooperationCircle), 1000) 
+        }
+
+        /*const reliabilityProgressCircle = document.getElementById("reliabilityProgressCircle");      
         const validityProgressCircle = document.getElementById("validityProgressCircle"); 
         const cooperationProgressCircle = document.getElementById("cooperationProgressCircle");
         const scrollPosition = window.pageYOffset;
@@ -26,8 +39,9 @@ export const HomeLowerSection = () => {
             reliabilityPercentageCounter(reliabilityProgressCircle)
             setTimeout(() => validityPercentageCounter(validityProgressCircle), 500)
             setTimeout(() => cooperationPercentageCounter(cooperationProgressCircle), 1000)          
-          }         
-      })
+          }  */       
+        }
+      )
      }
     )
 
