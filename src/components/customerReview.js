@@ -22,7 +22,7 @@ class CustomerReview extends React.Component {
             const windowHeight = window.innerHeight;
             const revealElementsDistance = revealElements[i].getBoundingClientRect().top;
             
-            if(windowHeight >  revealElementsDistance ){
+            if(windowHeight >=  revealElementsDistance ){
               revealElements[i].classList.add("rotateOnX")
             }
           }
@@ -32,7 +32,7 @@ class CustomerReview extends React.Component {
 
     render(){
         return   <div class="customerReview" id="linksGrid">            
-                    <h1 id="linksTitle">This is the title</h1>
+                    <h1 id="linksTitle">Our Services</h1>
                     <div id="firstLink" className="portraitLinks"><img id="io" src={io}></img></div>
                     <div id="secondLink" className="portraitLinks"><img id="io" src={io}></img></div>
                     <div id="thirdLink" className="portraitLinks"><img id="io" src={io}></img></div>                
