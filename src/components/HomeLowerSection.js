@@ -24,22 +24,11 @@ export const HomeLowerSection = () => {
         const validityCircle = document.getElementById("validityProgressCircle"); 
         const cooperationCircle = document.getElementById("cooperationProgressCircle");
 
-        if(circlesLoadPosition > reliabilityTopDistance){
-          reliabilityPercentageCounter(reliabilityCircle)
-          setTimeout(() => validityPercentageCounter(validityCircle), 500)
-          setTimeout(() => cooperationPercentageCounter(cooperationCircle), 1000) 
-        }
-
-        /*const reliabilityProgressCircle = document.getElementById("reliabilityProgressCircle");      
-        const validityProgressCircle = document.getElementById("validityProgressCircle"); 
-        const cooperationProgressCircle = document.getElementById("cooperationProgressCircle");
-        const scrollPosition = window.pageYOffset;
-
-        if(scrollPosition >  document.querySelector('.HomeLowerSection').offsetTop + 250){
-            reliabilityPercentageCounter(reliabilityProgressCircle)
-            setTimeout(() => validityPercentageCounter(validityProgressCircle), 500)
-            setTimeout(() => cooperationPercentageCounter(cooperationProgressCircle), 1000)          
-          }  */       
+          if(circlesLoadPosition > reliabilityTopDistance){
+            reliabilityPercentageCounter(reliabilityCircle)
+            setTimeout(() => validityPercentageCounter(validityCircle), 500)
+            setTimeout(() => cooperationPercentageCounter(cooperationCircle), 1000) 
+          }      
         }
       )
      }
