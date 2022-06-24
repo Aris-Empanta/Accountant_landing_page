@@ -1,10 +1,11 @@
 #linksGrid {
     display: grid;
     grid-template-areas: "header header header"
-                         "firstLink secondLink thirdLink";                       
+                         "firstLink secondLink thirdLink"
+                         "footer footer footer";                       
     top: 480px;
     width: 100vw;
-    height: 650px;
+    height: 1350px;
     position: absolute;
     background-color: white;
 }
@@ -41,6 +42,40 @@
     align-self: center;
 }
 
+#footer {
+    grid-area: footer;
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 700px;
+    align-self:flex-end;
+}
+
+#footerChildren {
+    position: absolute;
+    bottom: 0;
+    background-color: #0066b2;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.footerGrandChildren {
+    width: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 450px;
+} 
+
+
+
 .portraitLinks {    
     position: relative;
     width: 350px;
@@ -49,6 +84,8 @@
     box-shadow: 1px 1px 4px 2px black;
     cursor: pointer;
 }
+
+
 
 .serviceDescription {
     position: absolute;
@@ -98,6 +135,32 @@
     font-size: 2rem;
 }
 
+.contactIcons {
+    color: goldenrod;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.quickLinks {
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 22px;
+}
+
+#quickLinksTitle {
+    font-size: 2.2rem;  
+}
+
+#contactTitle {
+    font-size: 2.2rem;
+}
+
+.contactDetails {
+    font-size: 1.1rem;
+}
+
 .rotateOnX {
     animation: rotationX 1.5s 1;    
     transform: rotateX(0);
@@ -117,27 +180,46 @@
 
 
 
+
+
+
 @media (max-width: 720px) {
     #linksGrid {
         grid-template-areas: "header"
                              "firstLink" 
                              "secondLink" 
-                             "thirdLink";
+                             "thirdLink"
+                             "footer";
+                            
         top: 1100px;
-        height: 1900px;
+        height: 3650px;
     }
-
+    #footer {
+        height: 1700px;
+    }
+    #footerChildren {
+        height: 1700px;
+        top: 0;
+    }
 }
 
 @media (min-width: 721px) and (max-width: 1100px){
     #linksGrid {
         grid-template-areas: "header header"
                              "firstLink secondLink" 
-                             "thirdLink thirdLink";
+                             "thirdLink thirdLink"
+                             "footer footer";
        
-        height: 1300px;
+        height: 3000px;
     }
-    
+
+    #footer {
+        height: 1100px;
+    }
+    #footerChildren {
+        height: 1100px;
+        top: 0;
+    }
 
 }
 

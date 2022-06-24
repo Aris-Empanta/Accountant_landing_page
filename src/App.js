@@ -3,7 +3,7 @@ import { HomeSection } from "./components/HomeSection.js";
 import {useState, useEffect} from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import { NavBar } from './components/NavBar';
-
+import { Footer } from "./components/Footer.js"
 
 //The parent component of the entire app
 const App = () => {
@@ -22,7 +22,8 @@ const App = () => {
       { loading?(<div id="loadingWrapper"><ClipLoader color={"darkcyan"} loading={loading} size={100} /></div>) :
       (<div id="components">
         <NavBar />
-        <HomeSection />     
+        <HomeSection /> 
+           
       </div>
       )}
     </div>

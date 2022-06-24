@@ -11,8 +11,6 @@ import { HomeLowerSection } from "./HomeLowerSection.js";
 
 
 
-
-
 export const HomeSection = () => {
   
 
@@ -116,9 +114,10 @@ export const HomeSection = () => {
                 </p>
               </div>
             </div>      
-            <HomeLowerSection />                                  
+            <HomeLowerSection />  
+                                            
           </div>                   
-        </div>       
+        </div>    
     </div>
   );
 }

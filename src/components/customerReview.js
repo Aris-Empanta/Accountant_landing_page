@@ -7,6 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { faCalculator } from '@fortawesome/free-solid-svg-icons';
 import { faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -91,7 +94,7 @@ class CustomerReview extends React.Component {
                     <div id="secondLink" className="portraitLinks">
                       <img className="io" src={taxServices}></img>
                       <div id="secondDescription" className='serviceDescription'>
-                        <p class="servicesSummary"> Our experienced proffessionals will help you save real money on taxes.</p>
+                        <p class="servicesSummary"> Our experienced proffessionals will help you save real money<faPhone /> on taxes.</p>
                       </div>
                       <div class="serviceTitle"> Tax Services </div>
                       <div class="servicesIconBox">
@@ -107,7 +110,37 @@ class CustomerReview extends React.Component {
                       <div class="servicesIconBox">
                        <FontAwesomeIcon icon={ faHandshake } className="servicesIcon" />
                       </div> 
-                    </div>               
+                    </div>   
+                    <div id="footer">
+                      <div id="footerChildren">
+                        <div class="footerGrandChildren">
+                          <h1 id="quickLinksTitle">Quick Links</h1>
+                          <a className='quickLinks' href="#">Home</a>
+                          <a className='quickLinks' href="#">Accounting Services</a>
+                          <a className='quickLinks' href="#">Tax Services</a>
+                          <a className='quickLinks' href="#">Insurance</a>
+                        </div>
+                        <div id="contactUs" class="footerGrandChildren">
+                          <h1 id="contactTitle" >Contact Us</h1>
+                          <p className='contactDetails'><FontAwesomeIcon icon={ faPhone } className="contactIcons" />
+                            415-664-7262
+                          </p>
+                          <p className='contactDetails'><FontAwesomeIcon icon={ faLocationDot } className="contactIcons" />  
+                            18710 Blue Lake
+                            Boston, CA 90066</p>
+                          <p className='contactDetails'><FontAwesomeIcon icon={ faEnvelope } className="contactIcons" />
+                           bost_accounts@outlook.com
+                          </p>
+                        </div>
+                        <div class="footerGrandChildren">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Nam ullamcorper hendrerit mi id condimentum. Morbi vitae 
+                        nisi enim. Nullam in pellentesque tortor. Donec neque nisl,
+                         blandit vel metus id, faucibus dapibus eros. Donec sapien massa,
+                        sollicitudin eget dictum in, placerat nec neque.
+                        </div>
+                      </div>
+                    </div>            
                  </div>                          
         }
 }
