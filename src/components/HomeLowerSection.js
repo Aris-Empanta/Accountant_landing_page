@@ -7,12 +7,13 @@ import { faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import { reliabilityPercentageCounter } from '../functions/functions';
 import { validityPercentageCounter } from '../functions/functions';
 import { cooperationPercentageCounter } from '../functions/functions';
-import { CustomerReview } from './customerReview.js';
+import { HomeFooterSection} from './HomeFooterSection.js';
 
-
+//This is the lower Home section component. It uses one imported component named HomeFooterSection.
 export const HomeLowerSection = () => {
     
-    
+  /*With below listener, once we scroll down to the 3 circles position
+  named reliability, validity and cooperation, the circles load full to 100%.*/
     useEffect(() => {      
 
       window.addEventListener("scroll", () =>{
@@ -73,7 +74,7 @@ export const HomeLowerSection = () => {
                 </div>                              
               </div>             
             </div>
-            <CustomerReview/>
+            <HomeFooterSection />
         </div>
        )
      }

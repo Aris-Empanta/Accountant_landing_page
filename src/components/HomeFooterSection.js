@@ -1,5 +1,5 @@
 import React from 'react';
-import "./css/CustomerReview.css"
+import "./css/HomeFooterSection.css"
 import accounting from "./images/accounting.jpg"
 import taxServices from "./images/tax_services.jpg"
 import insurance from "./images/insurance.jpg"
@@ -13,12 +13,14 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
 
-class CustomerReview extends React.Component {
+class HomeFooterSection extends React.Component {
 
     constructor(props) {
       super(props);
     }    
 
+    /*With Below Listener, the 3 "cards" (accounting, tax services, insurance)
+     will rotate and appear onscroll */
     componentDidMount(){      
   
       window.addEventListener("scroll", () => {
@@ -36,7 +38,9 @@ class CustomerReview extends React.Component {
           }
         }
       )
-
+      
+      /*With the functions bellow, once we hover on either of three services "cards",
+       a description text of each service will come up.*/
       const accounting = document.getElementById("firstLink")
       const taxServices = document.getElementById("secondLink")
       const insurance = document.getElementById("thirdLink")
@@ -79,10 +83,10 @@ class CustomerReview extends React.Component {
   }
 
     render(){
-        return   <div class="customerReview" id="linksGrid">            
+        return   <div id="linksGrid">            
                     <h1 id="linksTitle">Our Services</h1>
                     <div id="firstLink" className="portraitLinks">
-                      <img className ="io" src={accounting}></img>
+                      <img className ="serviceImage" src={accounting}></img>
                       <div id="firstDescription" className='serviceDescription'>
                         <p class="servicesSummary"> We mannage the accounting and the bookkeeping of businesses and persons.</p>
                       </div>
@@ -92,7 +96,7 @@ class CustomerReview extends React.Component {
                       </div> 
                     </div>
                     <div id="secondLink" className="portraitLinks">
-                      <img className="io" src={taxServices}></img>
+                      <img className="serviceImage" src={taxServices}></img>
                       <div id="secondDescription" className='serviceDescription'>
                         <p class="servicesSummary"> Our experienced proffessionals will help you save real money<faPhone /> on taxes.</p>
                       </div>
@@ -102,7 +106,7 @@ class CustomerReview extends React.Component {
                       </div> 
                     </div>
                     <div id="thirdLink" className="portraitLinks">
-                      <img className ="io" src={insurance}></img>
+                      <img className ="serviceImage" src={insurance}></img>
                       <div id="thirdDescription" className='serviceDescription'>
                         <p class="servicesSummary"> We have the best insurance solutions depending your needs</p>
                       </div>
@@ -145,4 +149,4 @@ class CustomerReview extends React.Component {
         }
 }
 
-export { CustomerReview } 
+export { HomeFooterSection } 

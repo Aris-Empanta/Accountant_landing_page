@@ -10,10 +10,11 @@ import { useEffect } from 'react';
 import { HomeLowerSection } from "./HomeLowerSection.js";
 
 
-
+//Below component holds the entire home section code, using 1 imported component for the lower home section
 export const HomeSection = () => {
   
-
+  /*With below functions, the 2 last paragraphs in upper home section will appear
+   only once we scroll to their ppsition.*/
   useEffect(() => {
 
         window.addEventListener("scroll", () => {         
@@ -114,8 +115,7 @@ export const HomeSection = () => {
                 </p>
               </div>
             </div>      
-            <HomeLowerSection />  
-                                            
+            <HomeLowerSection />                                           
           </div>                   
         </div>    
     </div>

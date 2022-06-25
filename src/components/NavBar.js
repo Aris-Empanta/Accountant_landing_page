@@ -8,9 +8,7 @@ import { useEffect } from 'react';
 import { showLinks } from '../functions/functions';
 
 //The navigation bar menu
-export const NavBar = () => {
-    
-    
+export const NavBar = () => {    
 
     //With below listener, once we scroll below the height of the images, the navbare gets a background color.
     useEffect( () => {  

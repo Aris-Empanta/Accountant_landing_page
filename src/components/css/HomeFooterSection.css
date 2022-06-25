@@ -1,3 +1,4 @@
+/*The entire css Grid that wraps all the footer section including the 3 services "cards".*/
 #linksGrid {
     display: grid;
     grid-template-areas: "header header header"
@@ -10,72 +11,7 @@
     background-color: white;
 }
 
-.io{
-    width: 100%;
-    height: 270px;
-}
-
-#linksTitle {
-    grid-area: header;
-    text-decoration: underline 2px;
-    justify-self: center;
-    align-self: center;
-    color: #202020;
-}
-
-#firstLink {
-    grid-area: firstLink;
-    justify-self: center;
-    align-self: center;   
-    
-}
-
-#secondLink {
-    grid-area: secondLink;
-    justify-self: center;
-    align-self: center; 
-}
-
-#thirdLink {
-    grid-area: thirdLink;
-    justify-self: center;
-    align-self: center;
-}
-
-#footer {
-    grid-area: footer;
-    position: relative;
-    background-color: white;
-    width: 100%;
-    height: 700px;
-    align-self:flex-end;
-}
-
-#footerChildren {
-    position: absolute;
-    bottom: 0;
-    background-color: #0066b2;
-    width: 100%;
-    height: 450px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 100px;
-}
-
-.footerGrandChildren {
-    width: 300px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: 450px;
-} 
-
-
-
+/*The general styling of the 3 links (accounting, tax services, insurance)*/
 .portraitLinks {    
     position: relative;
     width: 350px;
@@ -86,7 +22,45 @@
 }
 
 
+/*The 3 images in the cards for accounting, tax services, insurance.*/
+.serviceImage {
+    width: 100%;
+    height: 270px;
+}
 
+/*The title of the 3 links named "Ours Services". */
+#linksTitle {
+    grid-area: header;
+    text-decoration: underline 2px;
+    justify-self: center;
+    align-self: center;
+    color: #202020;
+}
+
+/*The link card for Accounting position in Grid.*/
+#firstLink {
+    grid-area: firstLink;
+    justify-self: center;
+    align-self: center;    
+}
+
+/*The link card for Tax Services position in Grid.*/
+#secondLink {
+    grid-area: secondLink;
+    justify-self: center;
+    align-self: center; 
+}
+
+/*The link card for Insurance position in Grid.*/
+#thirdLink {
+    grid-area: thirdLink;
+    justify-self: center;
+    align-self: center;
+}
+
+
+/*The description appearing on the services links once we
+hover over them.*/
 .serviceDescription {
     position: absolute;
     background-color: rgb(0,150,255, 0.8);
@@ -99,6 +73,7 @@
     transition: height 0.5s;
 }
 
+/*The title of each services links card.*/
 .serviceTitle {
     position: absolute;
     display: flex;
@@ -112,11 +87,13 @@
     bottom: 0;
 }
 
+/*The text inside the serviceDescription appearing on hover*/
 .servicesSummary {
     width: 90%;
     font-size: 1.2rem;
 }
 
+/*The circle containing the icon in the services links card.*/
 .servicesIconBox {
     position: absolute;
     display: flex;
@@ -130,17 +107,48 @@
     background-color: #0066b2;
 }
 
+/*The icon inthe circle mentioned above*/
 .servicesIcon {
     color: white;
     font-size: 2rem;
 }
 
-.contactIcons {
-    color: goldenrod;
-    font-size: 1.5rem;
-    margin-right: 10px;
+/*The outer wrapper holding the footer.*/
+#footer {
+    grid-area: footer;
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 600px;
+    align-self:flex-end;
 }
 
+/*The flexbox holding the footer components.*/
+#footerChildren {
+    position: absolute;
+    bottom: 0;
+    background-color: #0066b2;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+/*The 3 components inside the footer section*/
+.footerGrandChildren {
+    width: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 450px;
+} 
+
+/*The quickLinks styling in the footer section*/
 .quickLinks {
     cursor: pointer;
     font-size: 1.2rem;
@@ -149,18 +157,35 @@
     margin-bottom: 22px;
 }
 
+.quickLinks:hover {
+    color: gold;
+}
+
+/*The title of the quickLinks*/
 #quickLinksTitle {
     font-size: 2.2rem;  
 }
 
+/*The title of the ContactUs*/
 #contactTitle {
     font-size: 2.2rem;
 }
 
+/*The contactDetails styling (phone, email, address)*/
 .contactDetails {
     font-size: 1.1rem;
 }
 
+/*The icons in contactUs element in footer, for
+phone, email and address.*/
+.contactIcons {
+    color: gold;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/*The class we add to the services links cards to make the rotate
+and appear once we scroll to their position.*/
 .rotateOnX {
     animation: rotationX 1.5s 1;    
     transform: rotateX(0);
@@ -178,11 +203,15 @@
     }
 }
 
+/*For small mobile screens adjustments*/
+@media (max-width: 400px) {
 
+    .portraitLinks {
+        width: 95%;
+    }
+} 
 
-
-
-
+/*For bigger mobile screen and i-pad adjustments*/
 @media (max-width: 720px) {
     #linksGrid {
         grid-template-areas: "header"
@@ -192,17 +221,24 @@
                              "footer";
                             
         top: 1100px;
-        height: 3650px;
+        height: 3400px;
     }
     #footer {
-        height: 1700px;
+        height: 1300px;
     }
     #footerChildren {
-        height: 1700px;
+        height: 1300px;
         top: 0;
     }
+
+    .footerGrandChildren {
+        height: 350px;
+        width: 87%;
+    }
+    
 }
 
+/*Minimized screen adjustments.*/
 @media (min-width: 721px) and (max-width: 1100px){
     #linksGrid {
         grid-template-areas: "header header"
@@ -210,15 +246,19 @@
                              "thirdLink thirdLink"
                              "footer footer";
        
-        height: 3000px;
+        height: 2200px;
     }
 
     #footer {
-        height: 1100px;
+        height: 700px;
     }
     #footerChildren {
-        height: 1100px;
+        height: 700px;
         top: 0;
+    }
+
+    .footerGrandChildren {
+        height: 300px;
     }
 
 }
