@@ -10,8 +10,7 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    row-gap: 30px;
-    
+    row-gap: 30px;    
   }
   
   /*The 'x' icon that appears in place of bars when we open the navbar menu*/
@@ -39,20 +38,26 @@
     width: 100vw;
     z-index: 6;
     top: 0;
-    height: 100px;
+    height: 115px;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
+  }
+
+   /*The logo at the navbar*/
+   #navBarLogo {
+    height: 100px;
+    width: 100px;
+    margin-left: 30px;
   }
   
 /*The bars icon on nav-bar menu*/
 #bars {
     color: white;
-    padding-right: 30px;
-    float: right;
+    margin-right: 30px;
     font-size: 2rem;
     z-index: 6;
-    cursor: pointer;
+    cursor: pointer;    
   }  
 
 /*The transparent button below the icon of the navbar*/  

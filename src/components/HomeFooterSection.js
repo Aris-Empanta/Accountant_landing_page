@@ -3,6 +3,7 @@ import "./css/HomeFooterSection.css"
 import accounting from "./images/accounting.jpg"
 import taxServices from "./images/tax_services.jpg"
 import insurance from "./images/insurance.jpg"
+import footerLogo from "./images/footerLogo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { faCalculator } from '@fortawesome/free-solid-svg-icons';
@@ -47,10 +48,17 @@ class HomeFooterSection extends React.Component {
       const accountingDescription = document.getElementById("firstDescription")
       const taxServicesDescription = document.getElementById("secondDescription")
       const insuranceDescription = document.getElementById("thirdDescription")
+      //We adjust description box height for mobile and larger screens:
+      const mobileScreen = window.matchMedia("(max-width: 350px)")
+      const largerScreen = window.matchMedia("(min-width: 351px)")
 
 
       accounting.addEventListener("mouseover", () => {
-          accountingDescription.style.height = "100px"
+          if(mobileScreen.matches){
+            accountingDescription.style.height = "135px"
+          }else if(largerScreen.matches){
+            accountingDescription.style.height = "105px"
+          }
         }
       )
 
@@ -61,7 +69,11 @@ class HomeFooterSection extends React.Component {
     
 
       taxServices.addEventListener("mouseover", () => {
-        taxServicesDescription.style.height = "100px"
+        if(mobileScreen.matches){
+          taxServicesDescription.style.height = "135px"
+        }else if(largerScreen.matches){
+          taxServicesDescription.style.height = "105px"
+        }
       }
     )
 
@@ -72,7 +84,11 @@ class HomeFooterSection extends React.Component {
 
 
       insurance.addEventListener("mouseover", () => {
-        insuranceDescription.style.height = "100px"
+        if(mobileScreen.matches){
+          insuranceDescription.style.height = "135px"
+        }else if(largerScreen.matches){
+          insuranceDescription.style.height = "105px"
+        }
      }
     )
 
@@ -136,12 +152,8 @@ class HomeFooterSection extends React.Component {
                            bost_accounts@outlook.com
                           </p>
                         </div>
-                        <div class="footerGrandChildren">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Nam ullamcorper hendrerit mi id condimentum. Morbi vitae 
-                        nisi enim. Nullam in pellentesque tortor. Donec neque nisl,
-                         blandit vel metus id, faucibus dapibus eros. Donec sapien massa,
-                        sollicitudin eget dictum in, placerat nec neque.
+                        <div class="footerGrandChildren" id="footerBrand">
+                          <img src={ footerLogo } id="footerLogo"></img>
                         </div>
                       </div>
                     </div>            

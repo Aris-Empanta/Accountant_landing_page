@@ -30,11 +30,15 @@ export const showLinks = () => {
   const tax = document.getElementById("tax")
   const insurance = document.getElementById("insurance")
   const contact = document.getElementById("contact")
+  const barsContainer = document.getElementById("barsContainer")
+  const logo = document.getElementById("navBarLogo")
 
   if(menu.style.display === 'flex'){
-    document.getElementById("barsContainer").style.backgroundColor = "transparent"
-    document.getElementById("barsContainer").style.border = "none"
-    document.getElementById("barsContainer").style.boxShadow = "none"
+    
+    barsContainer.style.backgroundColor = "transparent"
+    barsContainer.style.border = "none"
+    barsContainer.style.boxShadow = "none"
+    logo.style.opacity = 0
     setTimeout(() => {
       home.style.opacity = 1
     },200)
@@ -50,26 +54,32 @@ export const showLinks = () => {
     setTimeout(() => {
       contact.style.opacity = 1
     },1000)
+
   }else if(window.pageYOffset <= 370 && menu.style.display !== 'flex'){
-    document.getElementById("barsContainer").style.backgroundColor = "transparent"
-    document.getElementById("barsContainer").style.boxShadow = "none"
-    document.getElementById("barsContainer").style.border = "none"
-    document.getElementById("barsContainer").style.opacity = 1
+
+    logo.style.opacity = 1
+    barsContainer.style.backgroundColor = "transparent"
+    barsContainer.style.boxShadow = "none"
+    barsContainer.style.border = "none"
+    barsContainer.style.opacity = 1
     home.style.opacity = 0
     accounting.style.opacity = 0
     tax.style.opacity = 0
     insurance.style.opacity = 0
     contact.style.opacity = 0
+
   }else if(window.pageYOffset > 370 && menu.style.display !== 'flex'){
-    document.getElementById("barsContainer").style.backgroundColor = "#005A9C"
-    document.getElementById("barsContainer").style.boxShadow = "0 2px 3px 0 rgba(0,0,0,.2)"
-    document.getElementById("barsContainer").style.border = "1px solid black"
-    document.getElementById("barsContainer").style.opacity = 0.7
+
+    logo.style.opacity = 1
+    barsContainer.style.backgroundColor = "rgba(0,90,156,0.7)"
+    barsContainer.style.boxShadow = "0 2px 3px 0 rgba(0,0,0,.2)"
+    barsContainer.style.border = "1px solid black"
     home.style.opacity = 0
     accounting.style.opacity = 0
     tax.style.opacity = 0
     insurance.style.opacity = 0
     contact.style.opacity = 0
+
   }
 
 }

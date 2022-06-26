@@ -99,7 +99,7 @@ hover over them.*/
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 140px;
+    left: 40%;
     bottom: 75px;
     height: 70px;
     width: 70px;
@@ -128,6 +128,7 @@ hover over them.*/
     position: absolute;
     bottom: 0;
     background-color: #0066b2;
+    border-top: 1px solid black;
     width: 100%;
     height: 450px;
     display: flex;
@@ -179,7 +180,7 @@ hover over them.*/
 /*The icons in contactUs element in footer, for
 phone, email and address.*/
 .contactIcons {
-    color: gold;
+    color: #D4AF37;
     font-size: 1.5rem;
     margin-right: 10px;
 }
@@ -203,8 +204,19 @@ and appear once we scroll to their position.*/
     }
 }
 
+
+/*The footers gold logo*/
+#footerLogo {
+    width: 150px;
+    height: 150px;
+    align-self: center;
+}
+
 /*For small mobile screens adjustments*/
 @media (max-width: 400px) {
+    .serviceDescription {
+        font-size: 1rem;
+    }
 
     .portraitLinks {
         width: 95%;
