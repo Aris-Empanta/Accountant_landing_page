@@ -47,7 +47,7 @@
     width: 51%;
     background: white;
     transform: skew(0deg, 7deg);
-    box-shadow: inset 0px 2px 3px silver
+    box-shadow: inset 0px 2px 3px #505050;
   }
   #underHome:after {
     content: '';

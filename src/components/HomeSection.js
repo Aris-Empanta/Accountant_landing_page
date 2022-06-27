@@ -8,6 +8,10 @@ import { faDollar} from '@fortawesome/free-solid-svg-icons';
 import { faChartLine} from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from 'react';
 import { HomeLowerSection } from "./HomeLowerSection.js";
+import { IndividualServices  } from '../textVariables/homeTextVariables';
+import { BusinessServices } from '../textVariables/homeTextVariables';
+import { ValuationServices } from '../textVariables/homeTextVariables';
+import { TaxServices } from '../textVariables/homeTextVariables';
 
 
 //Below component holds the entire home section code, using 1 imported component for the lower home section
@@ -16,7 +20,22 @@ export const HomeSection = () => {
   /*With below functions, the 2 last paragraphs in upper home section will appear
    only once we scroll to their ppsition.*/
   useEffect(() => {
+        const navbarContainer = document.getElementById("barsContainer")
+        const menu = document.getElementById("menu")
 
+        //With below listener, once we scroll below the height of the images, the navbare gets a background color.
+          window.addEventListener("scroll", () =>{
+              if(window.pageYOffset > 370 && menu.style.display !== "flex"){
+                navbarContainer.style.backgroundColor = "rgba(0,90,156,0.7)"
+                navbarContainer.style.boxShadow = "0 2px 4px 0 rgba(0,0,0,.2)"
+                navbarContainer.style.border = "1px solid black"
+            }else{
+                navbarContainer.style.backgroundColor = "transparent"
+                navbarContainer.style.boxShadow = "none"
+                navbarContainer.style.border = "none"
+            }
+            })        
+         
         window.addEventListener("scroll", () => {         
           const element = document.querySelectorAll(".serviceParagraph")
 
@@ -38,20 +57,16 @@ export const HomeSection = () => {
   return (
     <div className="HomeUpperSection">        
         <img src={ writting_pen } alt="writting pen" id="writting_pen"></img>          
-        <h1 id="accountantOfficeTitle">ACCOUNTANT OFFICE IN BOSTON</h1>
+        <h1 id="accountantOfficeTitle">BOSTON ACCOUNTANTS</h1>
         <h2 id="taxConsultantSubTitle">TAX CONSULTANT FOR&nbsp;&nbsp;
           <span id="services" >
-            <Typed 
-            strings={[
-              'ACCOUNTING MANAGEMENT',
-              'BUSINESS SETUP',
-              'ACCOUNTING SUPPORT',          
-              'BUSINESS CONSULTING'
-            ]}
-            typeSpeed={50}
-            backSpeed={50}
-            loop
-            />
+            <Typed strings={[ 'ACCOUNTING MANAGEMENT',
+                              'BUSINESS SETUP',
+                              'ACCOUNTING SUPPORT',          
+                              'BUSINESS CONSULTING'  ]}           
+                   typeSpeed={50}
+                   backSpeed={50}
+                   loop />
           </span>
         </h2>       
         <div id="underHome">
@@ -63,12 +78,7 @@ export const HomeSection = () => {
               </div>
               <div class="servicesText">
                 <h3>Individual Services</h3>
-                <p id="header1">We work with individuals to provide tax
-                                 planning and preparation, estate and gift 
-                                 tax planning. We can also assist with personal 
-                                 financial statement preparation and compilation, 
-                                 as well as financial consulting and planning.
-                </p>
+                <p id="header1"> { IndividualServices } </p>
               </div>
             </div>
             <div id="services2" className='serviceParagraph'  >
@@ -77,13 +87,7 @@ export const HomeSection = () => {
               </div>
               <div class="servicesText">
                 <h3>Business Services</h3>
-                <p>We provide accounting, bookkeeping, 
-                   payroll and tax preparation services
-                   to established businesses. We also enjoy 
-                   helping start-up businesses launch through 
-                   consulting, financial analysis, projections
-                   and forecasts.
-                </p>
+                <p>{ BusinessServices }</p>
               </div>
             </div>
             <div id="services3" className='serviceParagraph' >
@@ -92,13 +96,7 @@ export const HomeSection = () => {
               </div>
               <div class="servicesText">
                 <h3>Valuation Services</h3>
-                <p id="header1"> We help businesses navigate complex 
-                                financial situations, such as mergers 
-                                and acquisitions. Our team provides support
-                                to companies and individuals with shareholder 
-                                disputes, marital dissolution, and litigation
-                                support and testimony.
-                </p>
+                <p id="header1">{ ValuationServices }</p>
               </div>
             </div>
             <div id="services4" className='serviceParagraph' >
@@ -107,12 +105,7 @@ export const HomeSection = () => {
               </div>
               <div class="servicesText">
                 <h3>Tax Services</h3>
-                <p>We help you plan carefully and
-                   take advantage of all deductions,
-                    credits, and strategies as the tax law allows.
-                    It's easy, just drop upload your tax documents
-                     to our secure file portal.
-                </p>
+                <p>{ TaxServices }</p>
               </div>
             </div>      
             <HomeLowerSection />                                           

@@ -1,0 +1,80 @@
+/*The top image in the accounting section*/
+#accountingImage {
+  position: relative;
+  width: 100vw;
+  height: 600px;
+  filter: brightness(60%);
+  top: 0;
+  z-index: -1;
+  box-shadow: 2px 2px 6px black;
+  overflow-x: hidden;
+}
+
+/*The sentence '300 enterprices'*/
+#enterpricesSentence {
+  position: absolute;
+  top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/*The number '300' of the enterprices sentence*/
+#enterpricesNumber {
+  color: white;
+  font-size: 5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/*The word 'enterprices' of the enterprices sentence**/
+#enterpricesWord {
+  font-size: 0;
+  color: yellow;
+  font-family: Garamond, serif;
+  font-weight: 400;
+  transition: font-size 2s;
+}
+
+/*The wrapper of the whole text in the section*/
+#financialControl {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/*The titled named: FINANCIAL CONTROL - BUSINESS EXPANSION*/
+#financialControlTitle {
+  max-width: 65vw;
+  margin-top: 60px;
+  font-family: Garamond, serif;
+  font-weight: 500;
+  font-size: 2.2rem;
+  color: #303030;
+}
+
+/*The first paragraph!*/
+#accountingFirstParagraph { 
+  font-weight: bold;
+}
+
+.accountingParagraphs {
+  font-size: 1.2rem;
+  max-width: 65vw;
+  color: #383838;  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Mobile screens adjustments*/
+@media (max-width: 500px) {
+
+    #enterpricesNumber{
+      display: block;
+    }
+
+}
