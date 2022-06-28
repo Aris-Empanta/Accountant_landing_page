@@ -2,7 +2,7 @@ import './App.css';
 import {useState, useEffect} from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import { NavBar } from './components/NavBar';
-import { Routes, Route,} from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { HomeSection } from "./components/HomeSection";
 import { Accounting } from './components/Accounting';
 import { TaxServices } from './components/TaxServices';
@@ -26,15 +26,17 @@ const App = () => {
   return (
     <div className="App">
       { loading?(<div id="loadingWrapper"><ClipLoader color={"darkcyan"} loading={loading} size={100} /></div>) :
-      (<div id="components">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<HomeSection />} />
-          <Route path="/accounting" element={<Accounting />} />
-          <Route path="/taxServices" element={<TaxServices />} />
-          <Route path="/insurance" element={<Insurance />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>                 
+      (<div id="components">       
+        
+          <NavBar />
+          <Routes>
+            <Route exact path="/" element={<HomeSection />} />
+            <Route exact path="/accounting" element={<Accounting />} />
+            <Route exact path="/taxServices" element={<TaxServices />} />
+            <Route exact path="/insurance" element={<Insurance />} />
+            <Route exact path="/contact" element={<Contact />} />
+          </Routes>          
+            
       </div>
       )}
     </div>
