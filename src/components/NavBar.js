@@ -22,11 +22,11 @@ export const NavBar = () => {
                 </button>       
             </div>
             <div id="menu"  class="menuBar">
-                <a className="menuList" id="home" href='/'>Home</a>
-                <a className="menuList" id="accounting" href='/accounting'>Accounting</a>
-                <a className="menuList" id="tax" >Tax Services</a>
-                <a className="menuList" id="insurance" >Insurances</a>
-                <a className="menuList" id="contact" >Contact</a>
+                <a className="menuList" id="home" href='/' >Home</a>
+                <a className="menuList" id="accounting" href='/accounting' >Accounting</a>
+                <a className="menuList" id="tax" href="/taxServices" >Tax Services</a>
+                <a className="menuList" id="insurance" href="/insurance" >Insurances</a>
+                <a className="menuList" id="contact" href="/contact" >Contact</a>
            </div>
         </div>
     )
