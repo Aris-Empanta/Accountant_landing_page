@@ -2,13 +2,14 @@ import './App.css';
 import {useState, useEffect} from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import { NavBar } from './components/NavBar';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import { HomeSection } from "./components/HomeSection.js";
+import { Routes, Route,} from "react-router-dom";
+import { HomeSection } from "./components/HomeSection";
 import { Accounting } from './components/Accounting';
+import { TaxServices } from './components/TaxServices';
+import { Insurance } from './components/Insurance';
+import { Contact } from './components/Contact';
+
+
 
 //The parent component of the entire app
 const App = () => {
@@ -30,6 +31,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomeSection />} />
           <Route path="/accounting" element={<Accounting />} />
+          <Route path="/taxServices" element={<TaxServices />} />
+          <Route path="/insurance" element={<Insurance />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>                 
       </div>
       )}

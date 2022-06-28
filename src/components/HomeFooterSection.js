@@ -11,6 +11,7 @@ import { faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 
 
@@ -102,34 +103,40 @@ class HomeFooterSection extends React.Component {
         return   <div id="linksGrid">            
                     <h1 id="linksTitle">Our Services</h1>
                     <div id="firstLink" className="portraitLinks">
-                      <img className ="serviceImage" src={accounting}></img>
-                      <div id="firstDescription" className='serviceDescription'>
-                        <p class="servicesSummary"> We mannage the accounting and the bookkeeping of businesses and persons.</p>
-                      </div>
-                      <div class="serviceTitle"> Accounting Services</div>
-                      <div class="servicesIconBox">
-                       <FontAwesomeIcon icon={ faBookOpen } className="servicesIcon" />
-                      </div> 
+                      <a  href="/accounting" target='_blank'>
+                        <img className ="serviceImage" src={accounting}></img>
+                        <div id="firstDescription" className='serviceDescription'>
+                          <p class="servicesSummary"> We mannage the accounting and the bookkeeping of businesses and persons.</p>
+                        </div>
+                        <div class="serviceTitle"> Accounting Services</div>
+                        <div class="servicesIconBox">
+                        <FontAwesomeIcon icon={ faBookOpen } className="servicesIcon" />
+                        </div> 
+                      </a>
                     </div>
                     <div id="secondLink" className="portraitLinks">
-                      <img className="serviceImage" src={taxServices}></img>
-                      <div id="secondDescription" className='serviceDescription'>
-                        <p class="servicesSummary"> Our experienced proffessionals will help you save real money<faPhone /> on taxes.</p>
-                      </div>
-                      <div class="serviceTitle"> Tax Services </div>
-                      <div class="servicesIconBox">
-                       <FontAwesomeIcon icon={ faCalculator } className="servicesIcon" />
-                      </div> 
+                      <a href='/taxServices' target="_blank">
+                        <img className="serviceImage" src={taxServices}></img>
+                        <div id="secondDescription" className='serviceDescription'>
+                          <p class="servicesSummary"> Our experienced proffessionals will help you save real money<faPhone /> on taxes.</p>
+                        </div>
+                        <div class="serviceTitle"> Tax Services </div>
+                        <div class="servicesIconBox">
+                        <FontAwesomeIcon icon={ faCalculator } className="servicesIcon" />
+                        </div> 
+                      </a>
                     </div>
                     <div id="thirdLink" className="portraitLinks">
-                      <img className ="serviceImage" src={insurance}></img>
-                      <div id="thirdDescription" className='serviceDescription'>
-                        <p class="servicesSummary"> We have the best insurance solutions depending your needs</p>
-                      </div>
-                      <div class="serviceTitle"> Insurance </div>
-                      <div class="servicesIconBox">
-                       <FontAwesomeIcon icon={ faHandshake } className="servicesIcon" />
-                      </div> 
+                      <a href='/insurance' target="_blank">
+                        <img className ="serviceImage" src={insurance}></img>
+                        <div id="thirdDescription" className='serviceDescription'>
+                          <p class="servicesSummary"> We have the best insurance solutions depending your needs</p>
+                        </div>
+                        <div class="serviceTitle"> Insurance </div>
+                        <div class="servicesIconBox">
+                        <FontAwesomeIcon icon={ faHandshake } className="servicesIcon" />
+                        </div> 
+                      </a>  
                     </div>   
                     <div id="footer">
                       <div id="footerChildren">

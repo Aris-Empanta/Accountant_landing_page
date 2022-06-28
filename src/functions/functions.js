@@ -153,8 +153,6 @@ export const enterpricesCounter = () => {
       let enterprices = document.getElementById("enterpricesNumber")
       let i=0
       let enterpricesWord = document.getElementById("enterpricesWord")
-      const mobileScreen = window.matchMedia("(max-width: 350px)")
-      const largerScreen = window.matchMedia("(min-width: 351px)")
 
       const countEnterPrices = setInterval( () => {              
             if( i <= 300 ){
@@ -163,10 +161,5 @@ export const enterpricesCounter = () => {
              }else{
                clearInterval(countEnterPrices)
              }
-           }, 5) 
-           if (mobileScreen.matches) {
-              enterpricesWord.style.fontSize = "1.5rem"  
-           }else if (largerScreen.matches) {
-              enterpricesWord.style.fontSize = "2.2rem" 
-           }             
-       }   
+           }, 5)          
+    }   

@@ -32,11 +32,10 @@
 
 /*The word 'enterprices' of the enterprices sentence**/
 #enterpricesWord {
-  font-size: 0;
+  font-size: 2.5;
   color: yellow;
   font-family: Garamond, serif;
   font-weight: 400;
-  transition: font-size 2s;
 }
 
 /*The wrapper of the whole text in the section*/
@@ -63,6 +62,7 @@
   font-weight: bold;
 }
 
+/*The first 3 paragraphs of the page*/
 .accountingParagraphs {
   font-size: 1.2rem;
   max-width: 65vw;
@@ -70,11 +70,92 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/*The wrapper that contains the 2 lists of documents required*/
+#documentsRequired {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vw;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
+/*The wrappers of the 2 lists mentioned above*/
+.documentsList {
+  max-width: 30vw;
+}
+
+/*The titles of the list*/
+.documentsListTitle {
+  color: #383838;  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 4rem;
+}
+
+/*The horizontal line above each list*/
+.listLine {
+  height: 1px;
+  background-color: #505050; 
+  border: none;
+}
+
+/*Each list item*/
+.documentsNeeded li {
+  font-size: 1.1rem;
+  color: #505050; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 1.8rem;
+}
+
+/*For smallest mocile screens*/
+@media (max-width: 350px) {
+
+  #financialControlTitle {
+    font-size: 1.5rem;
+  }
+
+  .accountingParagraphs {
+    font-size: 1rem;
+  }
+
+  .documentsNeeded li {
+    font-size: 1rem;
+  }
+
+  #enterpricesWord {
+    font-size: 1.5rem;
+  }
+}
+
 /*Mobile screens adjustments*/
 @media (max-width: 500px) {
+    
+    #financialControlTitle {
+      font-size: 1.5rem;
+    }
 
+    .accountingParagraphs {
+      font-size: 1rem;
+    }
+
+    .documentsNeeded li {
+      font-size: 1rem;
+    }
+    
+    
     #enterpricesNumber{
       display: block;
     }
+}
 
+/*Smaller screens adjustments*/
+@media (max-width: 1100px) {
+
+  .documentsList {
+    max-width: 65vw;
+  }
+
+  .listLine {
+    max-width: 65vw;
+  }
 }
