@@ -1,0 +1,66 @@
+/*The top image of taxServices component*/
+#taxImage {
+    position: relative;
+    width: 100vw;
+    height: 600px;
+    filter: brightness(70%);
+    top: 0;
+    z-index: -1;
+    box-shadow: 2px 2px 6px black;
+    overflow-x: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+}
+
+/*The 3D container div of the title "Tax Services", which helps the title 
+animation once component loads*/
+#threeDHeaderSpace {
+    position: absolute;
+    top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 400px;
+    width: 50vw;
+    perspective: 300px;
+}
+
+/*The title "Tax Services"*/
+#taxHeader {   
+    color: white;
+    font-size: 4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    transform-style: preserve-3d;
+    transform: translateZ(-400px) translateY(0) scaleX(20%);
+}
+
+/*The class we add to make the title's animation*/
+.bounceHeader {
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+   
+    50% {
+        transform: translateZ(-200px) translateY(-100px) scaleX(40%);
+    }
+
+    100% {
+        transform: translateZ(0) translateY(0) ;
+    }
+}
+
+/*Adjusting for mobile screens*/
+@media (max-width: 500px) {
+
+    #taxHeader {
+        font-size: 3rem;
+    }
+}

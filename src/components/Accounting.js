@@ -6,6 +6,7 @@ import { firstParagraph } from "../textVariables/accountingTextVariables"
 import { secondParagraph } from "../textVariables/accountingTextVariables"
 import { thirdParagraph } from "../textVariables/accountingTextVariables"
 import { Footer } from "./footerGeneral" 
+import { ContactButton } from "./ContactButton"
 
 export const Accounting = () => {
 
@@ -62,7 +63,7 @@ export const Accounting = () => {
                         </ol>
                     </div>
                     <div class="documentsList">
-                    <hr class="listLine" />
+                        <hr class="listLine" />
                         <h2 class="documentsListTitle">Yearly bases accounting</h2>
                         <ol class="documentsNeeded">
                             <li>Company bank account statement for full fiscal year</li>
@@ -78,7 +79,9 @@ export const Accounting = () => {
                                 annual report must be provided.</li>
                         </ol>
                     </div>
+                    
                 </div>
+                <ContactButton />
                 <Footer />               
            </div>
 }

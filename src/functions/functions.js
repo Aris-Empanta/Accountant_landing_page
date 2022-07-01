@@ -152,7 +152,6 @@ export const enterpricesCounter = () => {
 
       let enterprices = document.getElementById("enterpricesNumber")
       let i=0
-      let enterpricesWord = document.getElementById("enterpricesWord")
 
       const countEnterPrices = setInterval( () => {              
             if( i <= 300 ){
@@ -161,5 +160,14 @@ export const enterpricesCounter = () => {
              }else{
                clearInterval(countEnterPrices)
              }
-           }, 5)          
+           }, 2)          
     }   
+
+//Below function, will cause the title "Tax Services" animation one TaxServices component loads
+export const titleBounch = () => {
+
+      const taxHeader = document.getElementById("taxHeader")
+
+      taxHeader.classList.add("bounceHeader") 
+}
+       

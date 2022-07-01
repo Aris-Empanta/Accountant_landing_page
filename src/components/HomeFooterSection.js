@@ -11,8 +11,6 @@ import { faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { Link } from "react-router-dom";
-
 
 
 class HomeFooterSection extends React.Component {
