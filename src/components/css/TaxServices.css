@@ -40,7 +40,7 @@ animation once component loads*/
 /*The class we add to make the title's animation*/
 .bounceHeader {
     animation-name: bounce;
-    animation-duration: 0.5s;
+    animation-duration: 0.4s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -56,6 +56,52 @@ animation once component loads*/
         transform: translateZ(0) translateY(0) ;
     }
 }
+
+/*The etire div of tax services section texts*/
+#taxServicesParagraphs {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#taxTitle {
+    max-width: 65vw;
+    margin-top: 60px;
+    font-family: Garamond, serif;
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: black;
+  }
+
+.taxParagraphs {
+    font-size: 1.2rem;
+    max-width: 65vw;
+    color: #383838;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  #taxListContainer {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+.documentsListTitle {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #383838;  
+}
+
+.taxServicesList li{
+    font-size: 1.1rem;
+    color: #505050; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 1.8rem;
+}  
 
 /*Adjusting for mobile screens*/
 @media (max-width: 500px) {

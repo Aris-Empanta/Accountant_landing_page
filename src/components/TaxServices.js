@@ -4,6 +4,8 @@ import { useEffect } from "react"
 import { titleBounch } from "../functions/functions"
 import { ContactButton } from "./ContactButton"
 import { Footer } from "./footerGeneral"
+import { firstTaxingParagraph } from "../textVariables/taxingTextVariables"
+import { secondTaxingParagraph } from "../textVariables/taxingTextVariables"
 
 export const TaxServices = () => {
     
@@ -24,8 +26,7 @@ export const TaxServices = () => {
                 navbarContainer.style.border = "none"
             }
           }  
-        )
-        
+        )        
         //The function which makes the title "Tax Services" appear with bounce
         titleBounch()          
         }
@@ -35,6 +36,22 @@ export const TaxServices = () => {
                 <img src= { taxes } id="taxImage" ></img>  
                 <div id="threeDHeaderSpace">
                     <h1 id="taxHeader">Tax Services</h1>
+                </div>
+                <div id="taxServicesParagraphs">
+                    <h1 id="taxTitle">GET INFORMED / SAVE TAXES</h1>
+                    <p id="taxFirstParagraph" class="taxParagraphs">&nbsp;&nbsp;{ firstTaxingParagraph } </p>
+                    <p id="taxSecondParagraph" class="taxParagraphs">&nbsp;&nbsp;{ secondTaxingParagraph }</p>
+                    <div id="taxListContainer">
+                        <h2 class="documentsListTitle">Our tax related services for businesses and individuals include:</h2>    
+                        <ul class="taxServicesList">
+                            <li>Tax returns for individuals</li>
+                            <li>Business tax preparation</li>
+                            <li>Estate tax returns</li>
+                            <li>Non-profit tax preparation services</li>
+                            <li>Expatriate tax preparation and FBAR filing</li>
+                            <li>Quicker tax refunds with E-file</li>
+                        </ul>
+                    </div>
                 </div>
                 <ContactButton />
                 <Footer />
