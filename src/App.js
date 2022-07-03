@@ -29,7 +29,7 @@ const App = () => {
                       <NavBar />                  
                       <Routes>
                         <Route path="/" element={<HomeSection />} />
-                        <Route path="/accounting" element={<Accounting />} />
+                        <Route path="/accounting" element={<Accounting />} loading/>
                         <Route path="/taxServices" element={<TaxServices />} />
                         <Route path="/insurance" element={<Insurance />} />
                         <Route path="/contact" element={<Contact />} />
