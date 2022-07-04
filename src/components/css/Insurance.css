@@ -1,0 +1,24 @@
+#insuranceSectionPhoto {
+    position: relative;
+    width: 100vw;
+    height: 600px;
+    filter: brightness(60%);
+    top: 0;
+    z-index: -1;
+    box-shadow: 2px 2px 6px black;
+    overflow-x: hidden;
+}
+
+#insuranceHeader {
+    position: absolute;
+    top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 4.5rem;
+    font-family: tahoma sans-serif;
+    font-weight: 500;
+}
