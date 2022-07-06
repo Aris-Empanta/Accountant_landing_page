@@ -50,7 +50,7 @@
     grid-template-areas: "header header header header"
                          "circle1 circle2 circle3 circle4";
     width: 100vw;
-    height: 300px;
+    height: 301x;
     background-color: #f2f3f4;
     justify-content: space-evenly;
     align-items: center;
