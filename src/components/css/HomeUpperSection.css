@@ -1,0 +1,213 @@
+/*The top image in Home page*/
+#writting_pen{
+    width: 100vw;
+    height: 600px;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    filter: brightness(60%);
+}
+
+/*The top title of the office */
+#accountantOfficeTitle {    
+    padding-top: 200px;
+    color: white;
+    font-size: 3rem;
+    text-align:center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/*The sub-title of the office */
+#taxConsultantSubTitle{
+  color: yellow;    
+  text-align:center;
+}
+
+#services {
+  color: aliceblue;
+}
+
+
+/*The div that make the image take the shape of a folder*/
+#underHome {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin-top: 200px;
+    height: 1500px;
+    width: 100%;
+  }
+  #underHome:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 51%;
+    background: white;
+    transform: skew(0deg, 7deg);
+    box-shadow: inset 0px 2px 3px #505050;
+  }
+  #underHome:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: white;
+    transform: skew(0deg, -7deg);
+    box-shadow: inset -1px 2px 1px silver;
+  }
+
+/*The entire div that contains the profile title and its paragraphs*/  
+#profileSection  {
+  top: 50px;
+  z-index: 3;
+  display: grid;
+  position: absolute;
+  width: 100%;
+  grid-template-areas: "header header"
+                      "item1 item2"
+                      "item3 item4";
+  grid-row-gap: 10px;
+
+}
+
+
+/*The title named "Our Profile"*/
+#profileTitle{
+  grid-area: header;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+}
+
+/*The wrapper that contains each fontawesome icon in profile section*/
+.fontIcon { 
+  font-size: 3rem;  
+  height: 100px;
+  width: 70px;
+  padding-top: 20px;
+}
+
+/*The wrapper that contains the header and description paragraphs in profile section*/
+.servicesText { 
+  text-align: left;
+  width: 70%;
+  word-wrap: break-word;
+}
+
+.serviceParagraph{
+  display: flex;  
+  justify-content: center;
+  color: #202020;
+}
+
+/*each wrapper that contains the header and description paragraphs in profile section separately*/
+#services1 {
+  grid-area: item1;   
+}
+
+#services2 {
+  grid-area: item2; 
+}
+
+/*Styling the last 2 paragraphs so that with javascript they will appear gradually on scroll*/
+#services3 {
+  grid-area: item3; 
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+#services4 {
+  grid-area: item4;  
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+/*Mobile screen adjustments*/
+@media (max-width: 490px){
+  #accountantOfficeTitle {
+    font-size: 1.6rem;
+    padding-top: 150px;
+  }
+
+  #taxConsultantSubTitle{
+    font-size: 1.1rem;
+  }
+
+  #services{
+    display: block;
+    font-size: 1.1rem;;
+  }
+  #underHome {
+    height: 2500px;
+  }
+
+}  
+
+/*Minimized screens adjustments*/
+@media (min-width:491px) and (max-width: 820px) {
+ 
+  #accountantOfficeTitle {
+    font-size: 1.8rem;
+    padding-top: 100px;
+  }
+  #underHome {
+    height: 2500px;
+  }
+
+  #taxConsultantSubTitle{
+    font-size: 1.5rem;
+  }
+
+  #services{
+    font-size: 1.5rem;
+    display: block;
+  }
+}
+
+/*Profile section grid adjustments once minimized*/
+
+@media (max-width: 1300px){
+
+  #profileSection  {    
+    grid-template-areas: "header header"
+                         "item1 item1"
+                         "item2 item2"
+                         "item3 item3"
+                         "item4 item4";  
+   }
+  
+  #services3 {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s, transform 1.5s;
+  }
+  
+  #services4 {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s, transform 1.5s;
+  }
+  
+}
+
+/*Fixing deteils for i-pads specifically*/
+@media (min-height: 1000px) {
+  #services3 {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  #services4 {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

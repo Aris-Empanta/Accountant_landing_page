@@ -1,0 +1,40 @@
+#contactContainer {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    perspective: 300px;
+  }
+  
+#contactButton {
+    width: 150px; 
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to bottom right, #6CB4EE,#0066b2); 
+    color: white;
+    border-radius: 4%;
+    font-size: 1.5rem;
+    transform: translateZ(-25px); 
+    transform-style: preserve-3d;
+    animation: backAndForth 1.5s infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes backAndForth {
+    0% {
+        transform: translateZ(-25px) 
+    }
+    50% {
+        transform: translateZ(0) 
+    }
+    100% {
+        transform: translateZ(-25px) 
+    }
+  }
+
+#contactButton a {
+  text-decoration: none;
+  color: white;
+}  
+  

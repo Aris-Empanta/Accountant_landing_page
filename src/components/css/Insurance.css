@@ -1,0 +1,156 @@
+/*The photo on top*/
+#insuranceSectionPhoto {
+    position: relative;
+    width: 100vw;
+    height: 600px;
+    filter: brightness(60%);
+    top: 0;
+    z-index: -1;
+    box-shadow: 2px 2px 6px black;
+    overflow-x: hidden;
+}
+
+/*The text inside the photo on top*/
+#insuranceHeader {
+    position: absolute;
+    top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-family: tahoma sans-serif;
+    font-weight: 500;
+}
+
+/*The wrapper that holds everything between top image and footer*/
+#insuranceWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/*The title named "Our package"*/
+#insuranceTitle {
+    max-width: 65vw;
+    margin-top: 60px;
+    font-family: Garamond, serif;
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: black;
+}
+
+/*The wrapper that holds the 4 circles of the insurance types*/
+#insuranceTypes {
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "circle1 circle2 circle3 circle4";
+    width: 100vw;
+    height: 300px;
+    background-color: #f2f3f4;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#packageTitle {
+    grid-area: header;
+    justify-self: center;
+    font-family: Garamond, serif;
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: black;
+}
+
+#carInsurance {
+    grid-area: circle1;
+}
+
+#healthInsurance {
+    grid-area: circle2;
+}
+
+#retirementInsurance {
+    grid-area: circle3;
+}
+
+#lifeInsurance {
+    grid-area: circle4;
+}
+
+/*The wrapper that holds each circle and insurance type description*/
+.packageGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    transform: translateY(70px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+    width: 170px;
+}
+
+/*Each of the 4 insurance type gold circles*/
+.packageCircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #FFBF00, #FFEA00 );
+    box-shadow: 2px 2px 6px gray;
+}
+
+
+
+/*The insurance description under each gold circle*/
+.packageDescription {
+    font-size: 1.3rem;
+    font-weight: 500; 
+      
+}
+
+
+/*Each paragraph in insurance component*/
+.insuranceParagraphs {
+    font-size: 1.2rem;
+    max-width: 65vw;
+    color: #383838;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#secondinsuranceParagraph {
+    padding-bottom: 7rem;
+}
+
+@media (max-width: 391px) {
+
+    #insuranceTypes {
+        height: 900px;
+        margin: auto;
+    }
+
+    #insuranceTypes {
+        grid-template-areas: "header"
+                             "circle1"
+                             "circle2"
+                             "circle3" 
+                             "circle4";
+    }
+}
+
+@media (min-width: 392px) and (max-width: 740px) {
+
+    #insuranceTypes {
+        height: 500px;
+    }
+
+    #insuranceTypes {
+        grid-template-areas: "header header"
+                            "circle1 circle2"
+                            "circle3 circle4";
+    }
+
+}
