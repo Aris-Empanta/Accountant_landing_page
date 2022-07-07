@@ -34,7 +34,7 @@ export const Insurance = () => {
                 <h1 id="insuranceHeader">Insurance</h1>
                 <div id="insuranceWrapper">
                     <h1 id="insuranceTitle">Your insurance - Our duty</h1>
-                    <p className="insuranceParagraphs">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ firstInsuranceParagraph }</p>
+                    <p className="insuranceParagraphs">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ firstInsuranceParagraph }</p>
                     <p id="secondinsuranceParagraph" className="insuranceParagraphs">{ secondInsuranceParagraph }</p>
                     <div id="insuranceTypes">
                         <h1 id="packageTitle">Our Packages</h1>
