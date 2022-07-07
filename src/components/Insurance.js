@@ -33,7 +33,7 @@ export const Insurance = () => {
                 <img id="insuranceSectionPhoto" src= { insuranceSection } />
                 <h1 id="insuranceHeader">Insurance</h1>
                 <div id="insuranceWrapper">
-                    <h1 id="insuranceTitle">Your insurance - Our duties</h1>
+                    <h1 id="insuranceTitle">Your insurance - Our duty</h1>
                     <p className="insuranceParagraphs">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ firstInsuranceParagraph }</p>
                     <p id="secondinsuranceParagraph" className="insuranceParagraphs">{ secondInsuranceParagraph }</p>
                     <div id="insuranceTypes">
