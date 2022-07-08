@@ -125,6 +125,120 @@
     padding-bottom: 7rem;
 }
 
+#slider {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    background-color: aquamarine;
+   
+}
+
+#partnerWrapper {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: slider 5s infinite;
+   
+}
+
+
+.partner {
+    width: 20%;
+    float: left;
+}
+
+#firstPartner {
+    background-color: #FFBF00;
+    height: 300px;
+}
+
+#secondPartner {
+    background-color: #383838;
+    height: 300px;
+}
+
+#thirdPartner {
+    background-color: blue;
+    height: 300px;
+}
+
+#fourthPartner {
+    background-color: green;
+    height: 300px;
+}
+
+#fifthPartner {
+    background-color: #FFBF00;
+    height: 300px;
+}
+
+#dotsWrapper {
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.slideDots {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%; 
+    background-color: white;
+    
+}
+
+
+  
+  
+  .quotes {
+      width: 100%;
+   
+  }
+  
+
+
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+
+
+.quotes {
+    width: 100%;
+ 
+}
+
 @media (max-width: 391px) {
 
     #insuranceTypes {

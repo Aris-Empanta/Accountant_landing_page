@@ -7,13 +7,13 @@ import { secondInsuranceParagraph } from "../textVariables/insuranceTextVariable
 
 export const Insurance = () => {
 
-    useEffect(() => {
+   useEffect(() => {
         
         
             const navbarContainer = document.getElementById("barsContainer")
             const menu = document.getElementById("menu")
     
-            //With below listener, once we scroll below the height of the images, the navbare gets a background color.
+            //With below listener, once we scroll below the height of the images, the navbar gets a background color.
             window.addEventListener("scroll", () =>{
                 if(window.pageYOffset > 500 && menu.style.display !== "flex"){
                     navbarContainer.style.backgroundColor = "rgba(0,90,156,0.7)"
@@ -23,10 +23,38 @@ export const Insurance = () => {
                     navbarContainer.style.backgroundColor = "transparent"
                     navbarContainer.style.boxShadow = "none"
                     navbarContainer.style.border = "none"
+                    
+                   
                 }
+                
               }  
             )
         window.addEventListener("scroll", insuranceUp)
+            })
+       
+    
+
+    useEffect(() => {
+            
+            const partner = document.getElementById("partnerWrapper")
+            if(partner.position === "relative"){
+
+                document.getElementById("firstDot").style.height = "50px"
+
+            } /*else if(document.getElementById("partnerWrapper").style.left === "-100%"){
+
+                document.getElementById("secondDot").style.backgroundColor = "red"
+
+            }  else if(document.getElementById("partnerWrapper").style.left === "-200%"){
+
+                document.getElementById("thirdDot").style.backgroundColor = "red"
+
+            } else if(document.getElementById("partnerWrapper").style.left ===  "-300%"){
+
+                document.getElementById("fourthDot").style.backgroundColor = "red"
+
+            }*/
+        
     })
 
     return <div>
@@ -56,5 +84,22 @@ export const Insurance = () => {
                         </div>
                     </div>
                 </div>
+               
+                <div id="slider">
+                  <div id="partnerWrapper">
+                    <div class="partner" id="firstPartner">First</div>
+                    <div class="partner" id="secondPartner">Second</div>
+                    <div class="partner" id="thirdPartner">Third</div>
+                    <div class="partner" id="fourthPartner">Fourth</div>
+                    <div class="partner" id="fifthPartner">First</div>
+                  </div>
+                  <div id="dotsWrapper">
+                    <div class="slideDots" id="firstDot"></div>
+                    <div class="slideDots" id="secondDot"></div>
+                    <div class="slideDots" id="thirdDot"></div>
+                    <div class="slideDots" id="fourthDot"></div>
+                  </div>                  
+                </div>
+                
            </div>
 }
