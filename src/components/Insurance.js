@@ -4,6 +4,17 @@ import insuranceSection from "./images/insuranceSection.jpg"
 import { insuranceUp } from "../functions/insuranceFunctions"
 import { firstInsuranceParagraph } from "../textVariables/insuranceTextVariables"
 import { secondInsuranceParagraph } from "../textVariables/insuranceTextVariables"
+import { truth } from "../textVariables/insuranceTextVariables"
+import { rely } from "../textVariables/insuranceTextVariables"
+import { safety } from "../textVariables/insuranceTextVariables"
+import { happyLife } from "../textVariables/insuranceTextVariables"
+import truthImage from "./images/truth.jpg"
+import relyImage from "./images/rely.jpg"
+import safetyImage from "./images/safety.jpg"
+import happyLifeImage from "./images/HappyLife.jpg"
+import { Footer } from "./footerGeneral" 
+import { ContactButton } from "./ContactButton"
+
 
 export const Insurance = () => {
 
@@ -30,32 +41,32 @@ export const Insurance = () => {
               }  
             )
         window.addEventListener("scroll", insuranceUp)
-            })
+        
+     
+
+        window.addEventListener("scroll", () => {
+            const partnerWrapper = document.getElementById("partnerWrapper")
+            const wrapperHeight = document.getElementById("partnerWrapper").getBoundingClientRect().top
+            const positionToSlide = window.innerHeight
+            
+            
+            if(positionToSlide >= wrapperHeight){
+                partnerWrapper.style.left = 0
+                
+                    
+                setTimeout(() => {
+                    partnerWrapper.classList.add("slide")
+                     
+                }, 1000);
+            }
+        })
+
+       
+    })
+
+
        
     
-
-    useEffect(() => {
-            
-            const partner = document.getElementById("partnerWrapper")
-            if(partner.position === "relative"){
-
-                document.getElementById("firstDot").style.height = "50px"
-
-            } /*else if(document.getElementById("partnerWrapper").style.left === "-100%"){
-
-                document.getElementById("secondDot").style.backgroundColor = "red"
-
-            }  else if(document.getElementById("partnerWrapper").style.left === "-200%"){
-
-                document.getElementById("thirdDot").style.backgroundColor = "red"
-
-            } else if(document.getElementById("partnerWrapper").style.left ===  "-300%"){
-
-                document.getElementById("fourthDot").style.backgroundColor = "red"
-
-            }*/
-        
-    })
 
     return <div>
                 <img id="insuranceSectionPhoto" src= { insuranceSection } />
@@ -84,22 +95,40 @@ export const Insurance = () => {
                         </div>
                     </div>
                 </div>
-               
+                <div id="partnerHeader">
+                    <h1 id="partnerHeight">Our Partner Groups</h1>
+                    <p id="partnerDescription">Our co-operation with worldwide known companies show our reliability in the market.</p>
+                </div>
                 <div id="slider">
                   <div id="partnerWrapper">
-                    <div class="partner" id="firstPartner">First</div>
-                    <div class="partner" id="secondPartner">Second</div>
-                    <div class="partner" id="thirdPartner">Third</div>
-                    <div class="partner" id="fourthPartner">Fourth</div>
-                    <div class="partner" id="fifthPartner">First</div>
-                  </div>
-                  <div id="dotsWrapper">
-                    <div class="slideDots" id="firstDot"></div>
-                    <div class="slideDots" id="secondDot"></div>
-                    <div class="slideDots" id="thirdDot"></div>
-                    <div class="slideDots" id="fourthDot"></div>
-                  </div>                  
-                </div>
-                
+                    <div class="partner" >
+                        <img src={ truthImage } className = "partnerImage"/>
+                        <p class="partnerDescription">{ truth }</p>
+                        <p className="partnerName">TRUTH</p>
+                    </div>
+                    <div class="partner" >
+                        <img src={ relyImage } className = "partnerImage"/>
+                        <p class="partnerDescription">{ rely }</p>
+                        <p className="partnerName">RELY</p>
+                    </div>
+                    <div class="partner" >
+                        <img src={ safetyImage } className = "partnerImage"/>
+                        <p class="partnerDescription">{ safety }</p>
+                        <p className="partnerName">SAFETY</p>
+                    </div>
+                    <div class="partner" >
+                        <img src={ happyLifeImage } className = "partnerImage"/>
+                        <p class="partnerDescription">{ happyLife }</p>
+                        <p className="partnerName">HAPPY LIFE</p>
+                    </div>
+                    <div class="partner" >
+                        <img src={ truthImage } className = "partnerImage"/>
+                        <p class="partnerDescription">{ truth }</p>
+                        <p className="partnerName">TRUTH</p>
+                    </div>                   
+                  </div>         
+                </div>               
+                <ContactButton />
+                <Footer /> 
            </div>
 }

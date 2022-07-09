@@ -121,6 +121,7 @@ hover over them.*/
     width: 100%;
     height: 600px;
     align-self:flex-end;
+    border-bottom: 1px solid #0066b2;
 }
 
 /*The flexbox holding the footer components.*/
