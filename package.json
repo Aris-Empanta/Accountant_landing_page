@@ -1,6 +1,8 @@
 {
+  "homepage": "http://Aris-Empanta.github.io/Accountant_landing_page",
   "name": "acountants_landing_page",
   "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -15,7 +17,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -36,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
