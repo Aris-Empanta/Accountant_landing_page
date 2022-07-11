@@ -8,7 +8,7 @@ import { thirdParagraph } from "../textVariables/accountingTextVariables"
 import { Footer } from "./footerGeneral" 
 import { ContactButton } from "./ContactButton"
 
-export const Accounting = () => {
+const Accounting = () => {
 
     useEffect(() => {
         
@@ -85,3 +85,5 @@ export const Accounting = () => {
                 <Footer />               
            </div>
 }
+
+export default Accounting

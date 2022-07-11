@@ -7,9 +7,26 @@ import './css/NavBar.css';
 import { showLinks } from '../functions/functions';
 import Logo from "./images/Logo.png"
 
+
 //The navigation bar menu
-export const NavBar = () => {    
-             
+const NavBar = () => {    
+     
+    const closeMenu = () => {
+        const menu = document.getElementById("menu")
+        const bars = document.getElementById("bars")
+        const xIcon = document.getElementById("xIcon")
+        const clickSound = document.getElementById("click")
+        const menuLinks = document.querySelectorAll(".menuList")
+
+        bars.style.display = 'initial'
+        menu.style.display = 'none'
+        xIcon.style.display = 'none'
+        clickSound.play()
+        for( let i=0; i < menuLinks.length; i++ ){
+            menuLinks[i].style.opacity = 0
+        }
+    }
+
     return(
         <div className="navBar">
             <div id="barsContainer">
@@ -20,21 +37,15 @@ export const NavBar = () => {
                     <audio src={click} id="click"/>
                 </button>       
             </div>
-            <div id="menu"  class="menuBar">
-                
-                    <a className="menuList" id="home" href="#/"> Home</a>
-                
-                
-                    <a className="menuList" id="accounting" href="#/accounting"> Accounting </a>
-                
-            
-                    <a className="menuList" id="tax" href="#/taxServices"> Tax Services</a>
-                
-                    <a className="menuList" id="insurance" href="#/insurance"> Insurances</a>
-                
-                    <a className="menuList" id="contact" href="#/contact"> Contact</a>
-                
+            <div id="menu"  class="menuBar">                
+                <a className="menuList" id="home" href="#/" onClick={ closeMenu }> Home</a>               
+                <a className="menuList" id="accounting" href="#/accounting" onClick={ closeMenu }> Accounting </a>           
+                <a className="menuList" id="tax" href="#/taxServices" onClick={ closeMenu }> Tax Services</a>               
+                <a className="menuList" id="insurance" href="#/insurance" onClick={ closeMenu }> Insurances</a>               
+                <a className="menuList" id="contact" href="#/contact" onClick={ closeMenu }> Contact</a>               
            </div>
         </div>
     )
 }
+
+export default NavBar

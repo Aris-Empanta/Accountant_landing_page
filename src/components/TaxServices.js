@@ -7,7 +7,7 @@ import { Footer } from "./footerGeneral"
 import { firstTaxingParagraph } from "../textVariables/taxingTextVariables"
 import { secondTaxingParagraph } from "../textVariables/taxingTextVariables"
 
-export const TaxServices = () => {
+const TaxServices = () => {
     
     useEffect( () => {
 
@@ -57,3 +57,5 @@ export const TaxServices = () => {
                 <Footer />
            </div>
 }
+
+export default TaxServices

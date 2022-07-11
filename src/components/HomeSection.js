@@ -15,7 +15,7 @@ import { TaxServices } from '../textVariables/homeTextVariables';
 
 
 //Below component holds the entire home section code, using 1 imported component for the lower home section
-export const HomeSection = () => {
+const HomeSection = () => {
   
   /*With below functions, the 2 last paragraphs in upper home section will appear
    only once we scroll to their ppsition.*/
@@ -115,3 +115,4 @@ export const HomeSection = () => {
   );
 }
 
+export default HomeSection

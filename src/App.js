@@ -1,13 +1,14 @@
+import * as React from 'react';
 import './App.css';
 import {useState, useEffect} from "react";
 import ClipLoader from "react-spinners/ClipLoader";
-import { NavBar } from './components/NavBar';
 import { Routes, Route} from "react-router-dom";
-import { HomeSection } from "./components/HomeSection";
-import { Accounting } from './components/Accounting';
-import { TaxServices } from './components/TaxServices';
-import { Insurance } from './components/Insurance';
-import { Contact } from './components/Contact';
+import NavBar from './components/NavBar';
+const HomeSection = React.lazy(() => import("./components/HomeSection"))
+const TaxServices = React.lazy(() => import("./components/TaxServices"))
+const Insurance = React.lazy(() => import("./components/Insurance"))
+const Contact = React.lazy(() => import("./components/Contact"))
+const Accounting = React.lazy(() => import("./components/Accounting"))
 
 
 
@@ -26,14 +27,18 @@ const App = () => {
         return ( <div>
                   { loading?(<div id="loadingWrapper"><ClipLoader color={"darkcyan"} loading={loading} size={100} /></div>) :(
                     <div id="components">                    
-                      <NavBar />                  
-                      <Routes>
-                        <Route path="/" element={<HomeSection />} />
-                        <Route path="/accounting" element={<Accounting />}/>
-                        <Route path="/taxServices" element={<TaxServices />} />
-                        <Route path="/insurance" element={<Insurance />} />
-                        <Route path="/contact" element={<Contact />} />
-                      </Routes>                     
+                      <NavBar />      
+                      <React.Suspense fallback={
+                        <div id="loadingWrapper"><ClipLoader color={"darkcyan"} loading={loading} size={100} /></div>
+                        }>          
+                        <Routes>                        
+                            <Route path="/" element={<HomeSection />} />                          
+                            <Route path="/accounting" element={<Accounting />}/>                          
+                            <Route path="/taxServices" element={<TaxServices />} />
+                            <Route path="/insurance" element={<Insurance />} />
+                            <Route path="/contact" element={<Contact />} />                        
+                        </Routes>                  
+                     </React.Suspense>  
                     </div>
                     )}
                   </div>                             

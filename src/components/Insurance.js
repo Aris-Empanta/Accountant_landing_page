@@ -16,7 +16,7 @@ import { Footer } from "./footerGeneral"
 import { ContactButton } from "./ContactButton"
 
 
-export const Insurance = () => {
+const Insurance = () => {
 
    useEffect(() => {
         
@@ -132,3 +132,5 @@ export const Insurance = () => {
                 <Footer /> 
            </div>
 }
+
+export default Insurance
