@@ -2,7 +2,7 @@ export const firstInsuranceParagraph = `Our primary target is the supply of top 
                                         insurance and reinsurance services in all classes 
                                         of insurance by building on our strategic alliance
                                         with Chedid Capital within international insurers 
-                                        as well as A rated Greek insurers.`
+                                        as well as A rated American insurers.`
 
 export const secondInsuranceParagraph = `Our Boston Regional Division provides specialised insurance
                                         solution for a range of US businesses. We focus on commercial 

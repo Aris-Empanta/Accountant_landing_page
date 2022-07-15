@@ -96,8 +96,8 @@ const Insurance = () => {
                     </div>
                 </div>
                 <div id="partnerHeader">
-                    <h1 id="partnerHeight">Our Partner Groups</h1>
-                    <p id="partnerDescription">Our co-operation with worldwide known companies show our reliability in the market.</p>
+                    <h1 id="ourPartnersTitle">Our Partner Groups</h1>
+                    <p id="partnerTitleDescription">Our co-operation with worldwide known companies show our reliability in the market.</p>
                 </div>
                 <div id="slider">
                   <div id="partnerWrapper">
@@ -127,8 +127,8 @@ const Insurance = () => {
                         <p className="partnerName">TRUTH</p>
                     </div>                   
                   </div>         
-                </div>               
-                <ContactButton />
+                </div>      
+                <ContactButton />              
                 <Footer /> 
            </div>
 }
