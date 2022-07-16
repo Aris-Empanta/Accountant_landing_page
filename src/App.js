@@ -15,14 +15,14 @@ const Accounting = React.lazy(() => import("./components/Accounting"))
 //The parent component of the entire app
 const App = () => {
 
-  const [loading, setLoading] = useState(true)
- 
-  //Making the loading effect.
-  useEffect(() => {    
-    setTimeout(() => {
-      setLoading(false)
-    }, 2000)
-  })  
+    const [loading, setLoading] = useState(true)
+  
+    //Making the loading effect.
+    useEffect(() => {    
+      setTimeout(() => {
+        setLoading(false)
+      }, 2000)
+    })  
 
         return ( <div>
                   { loading?(<div id="loadingWrapper"><ClipLoader color={"darkcyan"} loading={loading} size={100} /></div>) :(

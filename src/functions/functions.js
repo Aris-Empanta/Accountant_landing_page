@@ -2,85 +2,85 @@
 we open or close the navigation menu */
 export const showMenu = () => {
 
-    const menu = document.getElementById("menu")
-    const bars = document.getElementById("bars")
-    const xIcon = document.getElementById("xIcon")
-    const clickSound = document.getElementById("click")
+  const menu = document.getElementById("menu")
+  const bars = document.getElementById("bars")
+  const xIcon = document.getElementById("xIcon")
+  const clickSound = document.getElementById("click")
 
-    if(menu.style.display !== 'flex'){
-      xIcon.style.display = 'initial'
-      menu.style.display = 'flex'
-      menu.style.opacity = 0.8
-      bars.style.display = 'none'
-      clickSound.play()
-    }else {
-      bars.style.display = 'initial'
-      menu.style.display = 'none'
-      xIcon.style.display = 'none'
-    
-    }
+  if(menu.style.display !== 'flex'){
+    xIcon.style.display = 'initial'
+    menu.style.display = 'flex'
+    menu.style.opacity = 0.8
+    bars.style.display = 'none'
+    clickSound.play()
+  }else {
+    bars.style.display = 'initial'
+    menu.style.display = 'none'
+    xIcon.style.display = 'none'
+  
   }
+}
 
 /*Below function makes navbar links appear one by one when 
 we open the navbar menu */
 export const showLinks = () => {
-  const menu = document.getElementById("menu")
-  const home = document.getElementById("home")
-  const accounting = document.getElementById("accounting")
-  const tax = document.getElementById("tax")
-  const insurance = document.getElementById("insurance")
-  const contact = document.getElementById("contact")
-  const barsContainer = document.getElementById("barsContainer")
-  const logo = document.getElementById("navBarLogo")
+const menu = document.getElementById("menu")
+const home = document.getElementById("home")
+const accounting = document.getElementById("accounting")
+const tax = document.getElementById("tax")
+const insurance = document.getElementById("insurance")
+const contact = document.getElementById("contact")
+const barsContainer = document.getElementById("barsContainer")
+const logo = document.getElementById("navBarLogo")
 
-  if(menu.style.display === 'flex'){
-    
-    barsContainer.style.backgroundColor = "transparent"
-    barsContainer.style.border = "none"
-    barsContainer.style.boxShadow = "none"
-    logo.style.opacity = 0
-    setTimeout(() => {
-      home.style.opacity = 1
-    },200)
-    setTimeout(() => {
-      accounting.style.opacity = 1
-    },400)
-    setTimeout(() => {
-      tax.style.opacity = 1
-    },600)
-    setTimeout(() => {
-      insurance.style.opacity = 1
-    },800)
-    setTimeout(() => {
-      contact.style.opacity = 1
-    },1000)
+if(menu.style.display === 'flex'){
+  
+  barsContainer.style.backgroundColor = "transparent"
+  barsContainer.style.border = "none"
+  barsContainer.style.boxShadow = "none"
+  logo.style.opacity = 0
+  setTimeout(() => {
+    home.style.opacity = 1
+  },200)
+  setTimeout(() => {
+    accounting.style.opacity = 1
+  },400)
+  setTimeout(() => {
+    tax.style.opacity = 1
+  },600)
+  setTimeout(() => {
+    insurance.style.opacity = 1
+  },800)
+  setTimeout(() => {
+    contact.style.opacity = 1
+  },1000)
 
-  }else if(window.pageYOffset <= 370 && menu.style.display !== 'flex'){
+}else if(window.pageYOffset <= 370 && menu.style.display !== 'flex'){
 
-    logo.style.opacity = 1
-    barsContainer.style.backgroundColor = "transparent"
-    barsContainer.style.boxShadow = "none"
-    barsContainer.style.border = "none"
-    barsContainer.style.opacity = 1
-    home.style.opacity = 0
-    accounting.style.opacity = 0
-    tax.style.opacity = 0
-    insurance.style.opacity = 0
-    contact.style.opacity = 0
+  logo.style.opacity = 1
+  barsContainer.style.backgroundColor = "transparent"
+  barsContainer.style.boxShadow = "none"
+  barsContainer.style.border = "none"
+  barsContainer.style.opacity = 1
+  home.style.opacity = 0
+  accounting.style.opacity = 0
+  tax.style.opacity = 0
+  insurance.style.opacity = 0
+  contact.style.opacity = 0
 
-  }else if(window.pageYOffset > 370 && menu.style.display !== 'flex'){
+}else if(window.pageYOffset > 370 && menu.style.display !== 'flex'){
 
-    logo.style.opacity = 1
-    barsContainer.style.backgroundColor = "rgba(0,90,156,0.7)"
-    barsContainer.style.boxShadow = "0 2px 3px 0 rgba(0,0,0,.2)"
-    barsContainer.style.border = "1px solid black"
-    home.style.opacity = 0
-    accounting.style.opacity = 0
-    tax.style.opacity = 0
-    insurance.style.opacity = 0
-    contact.style.opacity = 0
+  logo.style.opacity = 1
+  barsContainer.style.backgroundColor = "rgba(0,90,156,0.7)"
+  barsContainer.style.boxShadow = "0 2px 3px 0 rgba(0,0,0,.2)"
+  barsContainer.style.border = "1px solid black"
+  home.style.opacity = 0
+  accounting.style.opacity = 0
+  tax.style.opacity = 0
+  insurance.style.opacity = 0
+  contact.style.opacity = 0
 
-  }
+}
 
 }
 

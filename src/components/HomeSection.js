@@ -22,6 +22,9 @@ const HomeSection = () => {
   useEffect(() => {
         const navbarContainer = document.getElementById("barsContainer")
         const menu = document.getElementById("menu")
+        const logo = document.getElementById("navBarLogo")
+        //Once load every component, logo should be obvious
+        logo.style.opacity = 1
 
         //With below listener, once we scroll below the height of the images, the navbare gets a background color.
           window.addEventListener("scroll", () =>{
