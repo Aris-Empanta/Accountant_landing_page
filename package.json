@@ -1,6 +1,6 @@
 {
   "homepage": "http://Aris-Empanta.github.io/accountant_webpage",
-  "name": "acountants_webpage",
+  "name": "acountant_webpage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
 }
