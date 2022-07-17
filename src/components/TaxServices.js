@@ -3,7 +3,7 @@ import taxes from "./images/Taxes.jpg"
 import { useEffect } from "react"
 import { titleBounch } from "../functions/functions"
 import { ContactButton } from "./ContactButton"
-import { Footer } from "./footerGeneral"
+import { Footer } from "./Footer"
 import { firstTaxingParagraph } from "../textVariables/taxingTextVariables"
 import { secondTaxingParagraph } from "../textVariables/taxingTextVariables"
 

@@ -12,7 +12,7 @@ import truthImage from "./images/truth.jpg"
 import relyImage from "./images/rely.jpg"
 import safetyImage from "./images/safety.jpg"
 import happyLifeImage from "./images/HappyLife.jpg"
-import { Footer } from "./footerGeneral" 
+import { Footer } from "./Footer"
 import { ContactButton } from "./ContactButton"
 
 
@@ -125,14 +125,14 @@ const Insurance = () => {
                         <p className="partnerName">HAPPY LIFE</p>
                     </div>
                     <div class="partner" >
-                        <img src={ truthImage } className = "partnerImage"/>
+                        <img src={ truthImage } alt="logo" className = "partnerImage"/>
                         <p class="partnerDescription">{ truth }</p>
                         <p className="partnerName">TRUTH</p>
                     </div>                   
                   </div>         
                 </div>      
                 <ContactButton />              
-                <Footer /> 
+                <Footer />
            </div>
 }
 

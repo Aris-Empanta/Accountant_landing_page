@@ -5,7 +5,7 @@ import { useEffect } from "react"
 import { firstParagraph } from "../textVariables/accountingTextVariables"
 import { secondParagraph } from "../textVariables/accountingTextVariables"
 import { thirdParagraph } from "../textVariables/accountingTextVariables"
-import { Footer } from "./footerGeneral" 
+import { Footer } from "./Footer"
 import { ContactButton } from "./ContactButton"
 
 const Accounting = () => {

@@ -140,10 +140,10 @@ class HomeFooterSection extends React.Component {
                       <div id="footerChildren">
                         <div class="footerGrandChildren">
                           <h1 id="quickLinksTitle">Quick Links</h1>
-                          <a className='quickLinks' href="#">Home</a>
-                          <a className='quickLinks' href="#">Accounting Services</a>
-                          <a className='quickLinks' href="#">Tax Services</a>
-                          <a className='quickLinks' href="#">Insurance</a>
+                          <a className='quickLinks' href="#/" target="_blank">Home</a>
+                          <a className='quickLinks' href="#/accounting" target="_blank">Accounting Services</a>
+                          <a className='quickLinks' href="#/taxServices" target="_blank">Tax Services</a>
+                          <a className='quickLinks' href="#/insurance" target="_blank">Insurance</a>
                         </div>
                         <div id="contactUs" class="footerGrandChildren">
                           <h1 id="contactTitle" >Contact Us</h1>

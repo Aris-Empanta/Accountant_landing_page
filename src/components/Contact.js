@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { Footer } from "./footerGeneral"
+import { Footer } from "./Footer"
 import "./css/Contact.css"
 
 const Contact = () => {
